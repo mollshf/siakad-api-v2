@@ -1,0 +1,22 @@
+info:
+  name: GetJadwalKelas
+  type: http
+  seq: 8
+
+http:
+  method: GET
+  url: "{{url}}/api/perkuliahan/kelaskuliah/:_id/jadwal"
+  headers:
+    - name: Authorization
+      value: "{{accessToken}}"
+  params:
+    - name: _id
+      value: 698ebff8bd6c90ce5badccae
+      type: path
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

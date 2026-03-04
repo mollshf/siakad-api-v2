@@ -1,0 +1,30 @@
+info:
+  name: InsertJadwalKelas
+  type: http
+  seq: 7
+
+http:
+  method: POST
+  url: "{{url}}/api/perkuliahan/kelaskuliah/:_id/jadwal"
+  headers:
+    - name: Authorization
+      value: "{{accessToken}}"
+  params:
+    - name: _id
+      value: 698ebff8bd6c90ce5badccae
+      type: path
+  body:
+    type: json
+    data: |-
+      {
+        "hari": 1, // 1-7 = senin-minggu
+        "jam_mulai": "hh:mm",
+        "jam_selesai": "hh:mm"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

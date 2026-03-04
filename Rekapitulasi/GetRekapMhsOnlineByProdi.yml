@@ -1,0 +1,25 @@
+info:
+  name: GetRekapMhsOnlineByProdi
+  type: http
+  seq: 5
+
+http:
+  method: GET
+  url: "{{url}}/api/rekapitulasi/krs/online/:id_periode/:id_prodi"
+  headers:
+    - name: Authorization
+      value: "{{accessToken}}"
+  params:
+    - name: id_periode
+      value: "20251"
+      type: path
+    - name: id_prodi
+      value: 291603c2-b691-4752-9600-f3dcaafd0d42
+      type: path
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

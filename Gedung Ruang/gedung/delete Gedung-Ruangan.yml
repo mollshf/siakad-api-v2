@@ -1,0 +1,25 @@
+info:
+  name: delete Gedung-Ruangan
+  type: http
+  seq: 4
+
+http:
+  method: DELETE
+  url: "{{urlDev}}/api/neofeeder/gedung-ruangan"
+  headers:
+    - name: Authorization
+      value: "{{accessToken}}"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"id\": \"654896162f81b3433535cd48\"\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

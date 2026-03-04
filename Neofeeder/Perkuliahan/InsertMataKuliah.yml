@@ -1,0 +1,27 @@
+info:
+  name: InsertMataKuliah
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{url}}/api/neofeeder/v2/perkuliahan/mata-kuliah"
+  headers:
+    - name: Authorization
+      value: "{{accessToken}}"
+  body:
+    type: json
+    data: |-
+      {
+          "kode_mata_kuliah": "SUBA901",
+          "nama_mata_kuliah": "SUBA901",
+          "id_prodi": "5b8470f6-8f13-4ed6-ba9b-520ebed40fbf",
+          "sks_mata_kuliah":"1"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

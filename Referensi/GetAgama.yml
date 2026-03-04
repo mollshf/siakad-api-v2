@@ -1,0 +1,22 @@
+info:
+  name: GetAgama
+  type: http
+  seq: 5
+
+http:
+  method: GET
+  url: "{{url}}/api/perkuliahan/referensi?type=agama"
+  headers:
+    - name: Authorization
+      value: "{{accessToken}}"
+  params:
+    - name: type
+      value: agama
+      type: query
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

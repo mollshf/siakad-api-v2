@@ -1,0 +1,25 @@
+info:
+  name: DeleteMataKuliah
+  type: http
+  seq: 3
+
+http:
+  method: DELETE
+  url: "{{url}}/api/neofeeder/v2/perkuliahan/mata-kuliah/:id_matkul"
+  headers:
+    - name: Authorization
+      value: "{{accessToken}}"
+  params:
+    - name: id_matkul
+      value: b3222d65-9363-4b63-9d39-08f0b1aa5dc8
+      type: path
+  body:
+    type: json
+    data: ""
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

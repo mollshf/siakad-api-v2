@@ -1,0 +1,34 @@
+info:
+  name: UpdateAKM
+  type: http
+  seq: 3
+
+http:
+  method: PUT
+  url: "{{url}}/api/perkuliahan/akm/:_id"
+  headers:
+    - name: Authorization
+      value: "{{accessToken}}"
+  params:
+    - name: _id
+      value: 69685ace6d67754df5c01dd4
+      type: path
+  body:
+    type: json
+    data: |-
+      {
+          "id_status_mahasiswa": "A",
+          "id_pembiayaan": "1",
+          "ips": "2.00",
+          "ipk": "3.00",
+          "sks_semester": "10",
+          "total_sks": "120",
+          "biaya_kuliah_smt": "0"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

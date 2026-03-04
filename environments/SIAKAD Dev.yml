@@ -1,0 +1,8 @@
+name: SIAKAD Dev
+variables:
+  - name: url
+    value: http://dev.verd.net.id:8000
+  - name: accessToken
+    value: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7Il9pZCI6IjY0MjEyNWI1OTFjMTM4N2JiZDc0ZDJmMiIsInVzZXJuYW1lIjoiQkJCIiwibmFtYSI6Ik11aGFtbWFkIEhheWthbCIsInJvbGUiOiJST0xFX0FETUlOIn0sImlhdCI6MTc3MjUxOTQ1MiwiZXhwIjoxNzcyNTM3NDUyfQ.BwuxjzzfxfYILktk91pp8kEKBbAkb1UZ4sQbKxL5lHw
+  - name: accestTokenMahasiswa
+    value: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7Il9pZCI6IjY0MjEyNWI1OTFjMTM4N2JiZDc0ZDJmMiIsInVzZXJuYW1lIjoiQkJCIiwibmFtYSI6Ik11aGFtbWFkIEhheWthbCIsInJvbGUiOiJST0xFX0FETUlOIn0sImlhdCI6MTc3MjUxOTQ1MiwiZXhwIjoxNzcyNTM3NDUyfQ.BwuxjzzfxfYILktk91pp8kEKBbAkb1UZ4sQbKxL5lHw

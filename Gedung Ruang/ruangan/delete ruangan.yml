@@ -1,0 +1,25 @@
+info:
+  name: delete ruangan
+  type: http
+  seq: 4
+
+http:
+  method: DELETE
+  url: "{{urlDev}}/api/neofeeder/gedung-ruangan/ruangan"
+  headers:
+    - name: Authorization
+      value: "{{accessToken}}"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"id\": \"64f562642672775d562c019c\"\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

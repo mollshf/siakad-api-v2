@@ -1,0 +1,25 @@
+info:
+  name: getAbsenMahasiswa
+  type: http
+  seq: 3
+
+http:
+  method: GET
+  url: "{{url}}/api/absensi/dosen?id_kelas_kuliah=76d260d4-40c2-4ba1-b413-4359ffa1575e&pertemuan=1"
+  headers:
+    - name: Authorization
+      value: "{{accessToken}}"
+  params:
+    - name: id_kelas_kuliah
+      value: 76d260d4-40c2-4ba1-b413-4359ffa1575e
+      type: query
+    - name: pertemuan
+      value: "1"
+      type: query
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

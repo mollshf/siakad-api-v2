@@ -1,0 +1,22 @@
+info:
+  name: GetDetailDataMahasiswKrs
+  type: http
+  seq: 2
+
+http:
+  method: GET
+  url: "{{url}}/api/perkuliahan/krs/mahasiswa/:nim"
+  headers:
+    - name: Authorization
+      value: "{{accessToken}}"
+  params:
+    - name: nim
+      value: "19310079"
+      type: path
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

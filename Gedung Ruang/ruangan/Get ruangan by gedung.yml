@@ -1,0 +1,22 @@
+info:
+  name: Get ruangan by gedung
+  type: http
+  seq: 2
+
+http:
+  method: GET
+  url: "{{url}}/api/neofeeder/gedung-ruangan/ruangan?id_gedung=65488cc1dde0e555497c88be"
+  headers:
+    - name: Authorization
+      value: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0N2ZmM2E2ZjNmODZlYmY0MWQ0NjI3ZiIsInJvbGUiOiJST0xFX01BSEFTSVNXQSIsInRpbWVTdGFtcCI6IjIwMjQtMDItMTJUMDU6MTk6NTMuNzk1WiIsImlhdCI6MTcwNzcxNTE5MywiZXhwIjoxNzA3NzIyMzkzfQ.Wv0L4qowuwk0Q8xZ9VljYqOsWLA_LZ-MNjAfSDwHRPg
+  params:
+    - name: id_gedung
+      value: 65488cc1dde0e555497c88be
+      type: query
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

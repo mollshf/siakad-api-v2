@@ -1,0 +1,23 @@
+name: SIAKAD API V1
+variables:
+  - name: url
+    value: http://10.30.30.125:8000
+  - name: accessToken
+    value: ""
+  - name: urlDev
+    value: http://dev.verd.net.id:8000
+    disabled: true
+  - name: neoUrl
+    value: 192.168.102.20:3003
+  - name: neoAccessToken
+    value: ""
+  - name: act
+    value: GetToken
+  - name: neoUser
+    value: "131003"
+  - secret: true
+    name: neoPass
+  - name: accessTokenOTP
+    value: ""
+  - name: accestTokenMahasiswa
+    value: ""

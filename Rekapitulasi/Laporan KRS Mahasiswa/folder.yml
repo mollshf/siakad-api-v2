@@ -1,0 +1,7 @@
+info:
+  name: Laporan KRS Mahasiswa
+  type: folder
+  seq: 1
+
+request:
+  auth: inherit

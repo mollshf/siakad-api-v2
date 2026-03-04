@@ -1,0 +1,31 @@
+info:
+  name: GetLogSaveNilaiKelas
+  type: http
+  seq: 4
+
+http:
+  method: GET
+  url: "{{url}}/api/log/save-nilai/:id_kelas_kuliah"
+  headers:
+    - name: Authorization
+      value: "{{accessToken}}"
+  params:
+    - name: nim
+      value: "23120013"
+      type: query
+      disabled: true
+    - name: flag
+      value: "0"
+      type: query
+      description: 1 = awal pengisian nilai, 2 = nilai yg diubah
+      disabled: true
+    - name: id_kelas_kuliah
+      value: 00144a0b-ee69-42e0-a1fc-3e287fd5adab
+      type: path
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,35 @@
+info:
+  name: InsertAktivitasMahasiswa
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{url}}/api/perkuliahan/aktivitas-mahasiswa"
+  headers:
+    - name: Authorization
+      value: "{{accessToken}}"
+  body:
+    type: json
+    data: |-
+      {
+          "id_jenis_aktivitas": "1",
+          "jenis_anggota": "0",
+          "program_mbkm": "0",
+          "id_prodi": "5b8470f6-8f13-4ed6-ba9b-520ebed40fbf",
+          "id_semester": "20251",
+          "judul": "untuk orang",
+          "keterangan": "",
+          "lokasi": "",
+          "sk_tugas": "",
+          "tanggal_sk_tugas": "", // yyyy-mm-dd
+          "tanggal_mulai": "", // yyyy-mm-dd
+          "tanggal_selesai": "" // yyyy-mm-dd
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

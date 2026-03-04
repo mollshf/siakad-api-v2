@@ -1,0 +1,25 @@
+info:
+  name: DeleteKurikulum
+  type: http
+  seq: 7
+
+http:
+  method: DELETE
+  url: "{{url}}/api/neofeeder/v2/perkuliahan/kurikulum/:id_kurikulum"
+  headers:
+    - name: Authorization
+      value: "{{accessToken}}"
+  params:
+    - name: id_kurikulum
+      value: 8b7e8b43-1269-41ea-8b7f-33f6d5bc6143
+      type: path
+  body:
+    type: json
+    data: ""
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

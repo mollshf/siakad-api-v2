@@ -1,0 +1,27 @@
+info:
+  name: RegisterDosenLB
+  type: http
+  seq: 14
+
+http:
+  method: POST
+  url: "{{url}}/api/user/dosen/lb"
+  headers:
+    - name: Authorization
+      value: "{{accessToken}}"
+  body:
+    type: json
+    data: |-
+      {
+          "nama": "suba",
+          "email": "omo@gmail.com",
+          "username": "subaomo",
+          "id_dosen": "183c3cf4-270b-444b-8dce-6fee365ccff7"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

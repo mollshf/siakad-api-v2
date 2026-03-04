@@ -1,0 +1,22 @@
+info:
+  name: GetMahasiswaByNim
+  type: http
+  seq: 2
+
+http:
+  method: GET
+  url: "{{url}}/api/perkuliahan/mahasiswa/:nim"
+  headers:
+    - name: Authorization
+      value: "{{accessToken}}"
+  params:
+    - name: nim
+      value: "25420006"
+      type: path
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

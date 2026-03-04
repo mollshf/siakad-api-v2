@@ -1,0 +1,7 @@
+info:
+  name: Export Data Riwayat Pendidikan
+  type: folder
+  seq: 1
+
+request:
+  auth: inherit

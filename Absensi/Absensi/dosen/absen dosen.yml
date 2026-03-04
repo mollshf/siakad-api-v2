@@ -1,0 +1,40 @@
+info:
+  name: absen dosen
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{url}}/api/absensi/dosen"
+  headers:
+    - name: Authorization
+      value: "{{accessToken}}"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"id_kelas_kuliah\": \"021bf8a7-9c4f-477a-9cb3-8a05e2fc3ad7\",\r
+
+      \    \"jam\": \"8:00 - 19:00\",\r
+
+      \    \"hari\": \"Rabu\"\r
+
+      }"
+  auth: inherit
+
+runtime:
+  scripts:
+    - type: after-response
+      code: |-
+        // Mengambil nilai token dari respons
+        var responseBody = res.getBody();
+        var id = responseBody.data.id;
+
+        // Menyimpan token ke dalam environment variable
+        bru.setEnvVar("id_absen_dosen", id);
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

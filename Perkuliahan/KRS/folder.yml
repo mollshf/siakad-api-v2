@@ -1,0 +1,11 @@
+info:
+  name: KRS
+  type: folder
+  seq: 9
+
+request:
+  auth: inherit
+
+docs:
+  content: module ini adalah kumpulan api yg mengatur KRS mahasiswa. menggunakan endpoint "InsertPesertaKelasKuliah" untuk mendaftarkan mahasiswa ke kelas yang dipilih oleh mahasiswa.
+  type: text/markdown

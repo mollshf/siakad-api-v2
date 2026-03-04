@@ -1,0 +1,40 @@
+info:
+  name: buka absen mahasiswa
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{url}}/api/absensi/dosen/buka-absen"
+  headers:
+    - name: Authorization
+      value: "{{accessToken}}"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"id_kelas_kuliah\": \"021bf8a7-9c4f-477a-9cb3-8a05e2fc3ad7\",\r
+
+      \    \"pertemuan\": \"pertemuan 1\"\r
+
+      }"
+  auth: inherit
+
+runtime:
+  scripts:
+    - type: after-response
+      code: |-
+        // Mengambil nilai token dari respons
+        var responseBody = res.getBody();
+        var id = responseBody.message.id;
+
+        // Menyimpan token ke dalam environment variable
+        bru.setEnvVar("idBukaAbsen", id);
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+docs: '"id_absen_dosen" digunakan untuk mengidentifikasi database absendosens agar mengirim data sesuai jadwal yang digunakan untuk membuka absen mahasiswa.'

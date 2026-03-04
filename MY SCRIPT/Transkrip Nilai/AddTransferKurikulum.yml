@@ -1,0 +1,33 @@
+info:
+  name: AddTransferKurikulum
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: "{{url}}/api/transkrip/transfer/kurikulum/:nim"
+  headers:
+    - name: Authorization
+      value: "{{accessToken}}"
+  params:
+    - name: nim
+      value: "21174030"
+      type: path
+  body:
+    type: json
+    data: |-
+      [
+          {
+              "id_matkul": "28bbd185-0060-4344-97a7-2e4d517ce024",
+              "nilai_angka": "90",
+              "nilai_huruf": "A",
+              "nilai_indeks": "90"
+          }
+      ]
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

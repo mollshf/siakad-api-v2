@@ -1,0 +1,18 @@
+info:
+  name: CreateStudentTuition
+  type: http
+  seq: 6
+
+http:
+  method: POST
+  url: "{{url}}/api/maja/tuition"
+  headers:
+    - name: Authorization
+      value: "{{accessToken}}"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

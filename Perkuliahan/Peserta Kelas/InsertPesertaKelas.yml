@@ -1,0 +1,28 @@
+info:
+  name: InsertPesertaKelas
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: "{{url}}/api/perkuliahan/kelaskuliah/:db_id_kelas_kuliah/peserta"
+  headers:
+    - name: Authorization
+      value: "{{accessToken}}"
+  params:
+    - name: db_id_kelas_kuliah
+      value: 69660b24c2bdb3c1b162807f
+      type: path
+  body:
+    type: json
+    data: |-
+      {
+          "id_registrasi_mahasiswa": "2adaa970-35f2-4904-bfe5-4be37a9e0a31"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

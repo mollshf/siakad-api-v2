@@ -1,0 +1,30 @@
+info:
+  name: SyncPesertaDanNilaiByIdKelas 2 Copy
+  type: http
+  seq: 8
+
+http:
+  method: POST
+  url: "{{url}}/api/neofeeder/v2/sync/peserta-nilai-kelas/id-kelas"
+  headers:
+    - name: Authorization
+      value: "{{accessToken}}"
+  body:
+    type: json
+    data: |-
+      [
+          "40d2eae3-36e6-4376-8085-4368b6a1b69e", 
+          "d9db1d3a-81f0-4692-9abf-6a7383cef3fd",
+          "e1ddd2cb-18cd-43b9-853b-71c0d114e55e",
+          "fdd33dc4-0efe-416b-8680-59c73aa22178",
+          "f7043265-7208-471e-a6f6-ae85de0230a5",
+          "c4ae0988-14e7-4310-b630-b058afe9886f",
+          "c7b7882f-70c7-46c6-9cab-ccd2818d6762"
+      ]
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

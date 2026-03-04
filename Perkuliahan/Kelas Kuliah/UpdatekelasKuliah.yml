@@ -1,0 +1,32 @@
+info:
+  name: UpdatekelasKuliah
+  type: http
+  seq: 4
+
+http:
+  method: PUT
+  url: "{{url}}/api/perkuliahan/kelaskuliah/:_id"
+  headers:
+    - name: Authorization
+      value: "{{accessToken}}"
+  params:
+    - name: _id
+      value: ""
+      type: path
+  body:
+    type: json
+    data: |-
+      {
+          "nama_kelas_kuliah": "KUO92",
+          "bahasan": "subarashi omoshiroiii",
+          "kapasitas": "90",
+          "tanggal_mulai_efektif": "19-02-2021",
+          "tanggal_akhir_efektif": "19-02-2031"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

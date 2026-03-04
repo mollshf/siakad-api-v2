@@ -1,0 +1,47 @@
+info:
+  name: embedIdKelastoNili
+  type: http
+  seq: 14
+
+http:
+  method: GET
+  url: "{{url}}/api/test/kelas/krs/nilai"
+  headers:
+    - name: Authorization
+      value: "{{accessToken}}"
+    - name: ""
+      value: ""
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+docs: |-
+  18403 != 2389 + 2619
+
+  s1 manajement
+
+  9 data berubah
+
+  1 data berubah awalnya bernilai menjadi null -> 68bb9fff3a39af3cf0520c43 | 23120072
+
+  5008 = 2389 + 2619
+
+  s1 ilmu hukum
+
+  2175
+
+  s1 peternakan
+
+  1238 = 310 + 485 + 443
+
+  98 data berubah
+
+  s1 pendidkkan dokter
+
+  1591
+
+  49 data berubah

@@ -1,0 +1,24 @@
+info:
+  name: ListBackTranskrip
+  type: http
+  seq: 5
+
+http:
+  method: DELETE
+  url: "{{url}}/api/perkuliahan/transkrip"
+  headers:
+    - name: Authorization
+      value: "{{accessToken}}"
+  body:
+    type: json
+    data: |-
+      {
+          "id": "68f9df49652e6f2d20b92e1c"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

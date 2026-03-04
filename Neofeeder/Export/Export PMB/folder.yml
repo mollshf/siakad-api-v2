@@ -1,0 +1,7 @@
+info:
+  name: Export PMB
+  type: folder
+  seq: 10
+
+request:
+  auth: inherit

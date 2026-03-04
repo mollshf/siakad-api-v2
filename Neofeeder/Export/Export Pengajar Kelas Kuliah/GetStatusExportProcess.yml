@@ -1,0 +1,65 @@
+info:
+  name: GetStatusExportProcess
+  type: http
+  seq: 2
+
+http:
+  method: GET
+  url: "{{url}}/api/neofeeder/v2/export/kelas/pengajar/status"
+  headers:
+    - name: Authorization
+      value: "{{accessToken}}"
+  body:
+    type: json
+    data: ""
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: GetStatusExportProcess
+    request:
+      url: "{{url}}/api/neofeeder/v2/export/kelas/peserta/status"
+      method: GET
+      headers:
+        - name: Authorization
+          value: "{{accessToken}}"
+      body:
+        type: json
+        data: ""
+    response:
+      statusText: "200"
+      headers:
+        - name: X-Powered-By
+          value: Express
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "108"
+        - name: ETag
+          value: W/"6c-ImdIV4TtqOFBXQsAag0ymwG/bQM"
+        - name: Vary
+          value: Accept-Encoding
+        - name: Date
+          value: Mon, 22 Dec 2025 01:25:18 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "code": 200,
+              "status": "Success",
+              "data": {
+                  "status_export": false,
+                  "message": "Proses Export sedang berlangsung!"
+              }
+          }

@@ -1,0 +1,7 @@
+info:
+  name: USER COLLECTIONS
+  type: folder
+  seq: 1
+
+request:
+  auth: inherit

@@ -1,0 +1,28 @@
+info:
+  name: GetAKM
+  type: http
+  seq: 2
+
+http:
+  method: GET
+  url: "{{url}}/api/perkuliahan/akm/?angkatan=2023&id_prodi=f5f3efbe-0a6e-46aa-83c1-e80e40583caa&id_semester="
+  headers:
+    - name: Authorization
+      value: "{{accessToken}}"
+  params:
+    - name: angkatan
+      value: "2023"
+      type: query
+    - name: id_prodi
+      value: f5f3efbe-0a6e-46aa-83c1-e80e40583caa
+      type: query
+    - name: id_semester
+      value: ""
+      type: query
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,277 @@
+info:
+  name: Post Export Riwayat Pendidikan
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{url}}/api/import/riwayat-pendidikan"
+  headers:
+    - name: Authorization
+      value: "{{accessToken}}"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"collections\": [\r
+
+      \        {\r
+
+      \            \"id_jalur_daftar\": \"12\",\r
+
+      \            \"id_jenis_daftar\": \"1\",\r
+
+      \            \"id_pembiayaan\": \"3\",\r
+
+      \            \"id_periode_masuk\": \"20241\",\r
+
+      \            \"kode_prodi\": \"14401\",\r
+
+      \            \"nama_ibu\": \"KURNIAWATI\",\r
+
+      \            \"nama_mahasiswa\": \"MIFTAHUL ADEK HIDAYATI\",\r
+
+      \            \"nama_prodi\": \"D3 KEPERAWATAN\",\r
+
+      \            \"nim\": \"24185012\",\r
+
+      \            \"sks_diakui\": \"0\",\r
+
+      \            \"tanggal_daftar\": \"2024-09-05\",\r
+
+      \            \"tempat_lahir\": \"LUBUK PAKAM\",\r
+
+      \            \"biaya_masuk\": \"0\"\r
+
+      \        },\r
+
+      \        {\r
+
+      \            \"id_jalur_daftar\": \"12\",\r
+
+      \            \"id_jenis_daftar\": \"1\",\r
+
+      \            \"id_pembiayaan\": \"3\",\r
+
+      \            \"id_periode_masuk\": \"20232\",\r
+
+      \            \"kode_prodi\": \"54201\",\r
+
+      \            \"nama_ibu\": \"Asnatul Jana\",\r
+
+      \            \"nama_mahasiswa\": \"RAHMA MINA\",\r
+
+      \            \"nama_prodi\": \"AGRIBISNIS\",\r
+
+      \            \"nim\": \"23130001\",\r
+
+      \            \"sks_diakui\": \"0\",\r
+
+      \            \"tanggal_daftar\": \"2023-08-05\",\r
+
+      \            \"tempat_lahir\": \"PAYA DAPUR\",\r
+
+      \            \"biaya_masuk\": \"0\"\r
+
+      \        },\r
+
+      \        {\r
+
+      \            \"id_jalur_daftar\": \"12\",\r
+
+      \            \"id_jenis_daftar\": \"1\",\r
+
+      \            \"id_pembiayaan\": \"3\",\r
+
+      \            \"id_periode_masuk\": \"20232\",\r
+
+      \            \"kode_prodi\": \"54201\",\r
+
+      \            \"nama_ibu\": \"Asnatul Jana\",\r
+
+      \            \"nama_mahasiswa\": \"RAHMA MINA\",\r
+
+      \            \"nama_prodi\": \"AGRIBISNIS\",\r
+
+      \            \"nim\": \"23130001\",\r
+
+      \            \"sks_diakui\": \"0\",\r
+
+      \            \"tanggal_daftar\": \"2023-08-05\",\r
+
+      \            \"tempat_lahir\": \"PAYA DAPUR\",\r
+
+      \            \"biaya_masuk\": \"0\"\r
+
+      \        },\r
+
+      \        {\r
+
+      \            \"id_jalur_daftar\": \"12\",\r
+
+      \            \"id_jenis_daftar\": \"1\",\r
+
+      \            \"id_pembiayaan\": \"3\",\r
+
+      \            \"id_periode_masuk\": \"20232\",\r
+
+      \            \"kode_prodi\": \"54201\",\r
+
+      \            \"nama_ibu\": \"Asnatul Jana\",\r
+
+      \            \"nama_mahasiswa\": \"RAHMA MINA\",\r
+
+      \            \"nama_prodi\": \"AGRIBISNIS\",\r
+
+      \            \"nim\": \"23130001\",\r
+
+      \            \"sks_diakui\": \"0\",\r
+
+      \            \"tanggal_daftar\": \"2023-08-05\",\r
+
+      \            \"tempat_lahir\": \"PAYA DAPUR\",\r
+
+      \            \"biaya_masuk\": \"0\"\r
+
+      \        },\r
+
+      \        {\r
+
+      \            \"id_jalur_daftar\": \"12\",\r
+
+      \            \"id_jenis_daftar\": \"1\",\r
+
+      \            \"id_pembiayaan\": \"3\",\r
+
+      \            \"id_periode_masuk\": \"20232\",\r
+
+      \            \"kode_prodi\": \"54201\",\r
+
+      \            \"nama_ibu\": \"Asnatul Jana\",\r
+
+      \            \"nama_mahasiswa\": \"RAHMA MINA\",\r
+
+      \            \"nama_prodi\": \"AGRIBISNIS\",\r
+
+      \            \"nim\": \"23130001\",\r
+
+      \            \"sks_diakui\": \"0\",\r
+
+      \            \"tanggal_daftar\": \"2023-08-05\",\r
+
+      \            \"tempat_lahir\": \"PAYA DAPUR\",\r
+
+      \            \"biaya_masuk\": \"0\"\r
+
+      \        },\r
+
+      \        {\r
+
+      \            \"id_jalur_daftar\": \"12\",\r
+
+      \            \"id_jenis_daftar\": \"1\",\r
+
+      \            \"id_pembiayaan\": \"3\",\r
+
+      \            \"id_periode_masuk\": \"20232\",\r
+
+      \            \"kode_prodi\": \"54201\",\r
+
+      \            \"nama_ibu\": \"Asnatul Jana\",\r
+
+      \            \"nama_mahasiswa\": \"RAHMA MINA\",\r
+
+      \            \"nama_prodi\": \"AGRIBISNIS\",\r
+
+      \            \"nim\": \"23130001\",\r
+
+      \            \"sks_diakui\": \"0\",\r
+
+      \            \"tanggal_daftar\": \"2023-08-05\",\r
+
+      \            \"tempat_lahir\": \"PAYA DAPUR\",\r
+
+      \            \"biaya_masuk\": \"0\"\r
+
+      \        },\r
+
+      \        {\r
+
+      \            \"id_jalur_daftar\": \"12\",\r
+
+      \            \"id_jenis_daftar\": \"1\",\r
+
+      \            \"id_pembiayaan\": \"3\",\r
+
+      \            \"id_periode_masuk\": \"20232\",\r
+
+      \            \"kode_prodi\": \"54201\",\r
+
+      \            \"nama_ibu\": \"Asnatul Jana\",\r
+
+      \            \"nama_mahasiswa\": \"RAHMA MINA\",\r
+
+      \            \"nama_prodi\": \"AGRIBISNIS\",\r
+
+      \            \"nim\": \"23130001\",\r
+
+      \            \"sks_diakui\": \"0\",\r
+
+      \            \"tanggal_daftar\": \"2023-08-05\",\r
+
+      \            \"tempat_lahir\": \"PAYA DAPUR\",\r
+
+      \            \"biaya_masuk\": \"0\"\r
+
+      \        },\r
+
+      \        {\r
+
+      \            \"id_jalur_daftar\": \"12\",\r
+
+      \            \"id_jenis_daftar\": \"1\",\r
+
+      \            \"id_pembiayaan\": \"3\",\r
+
+      \            \"id_periode_masuk\": \"20232\",\r
+
+      \            \"kode_prodi\": \"54201\",\r
+
+      \            \"nama_ibu\": \"Asnatul Jana\",\r
+
+      \            \"nama_mahasiswa\": \"RAHMA MINA\",\r
+
+      \            \"nama_prodi\": \"AGRIBISNIS\",\r
+
+      \            \"nim\": \"23130001\",\r
+
+      \            \"sks_diakui\": \"0\",\r
+
+      \            \"tanggal_daftar\": \"2023-08-05\",\r
+
+      \            \"tempat_lahir\": \"PAYA DAPUR\",\r
+
+      \            \"biaya_masuk\": \"0\"\r
+
+      \        }\r
+
+      \    ]\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+docs: |-
+  ## Description
+
+  ini adalah endpoint untuk meng-export data riwayat pendidikan dari n ke neofeeder
+
+  ``` coffeescript
+  <code >sd</code>
+
+   ```

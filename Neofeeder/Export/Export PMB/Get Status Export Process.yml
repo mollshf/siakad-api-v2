@@ -1,0 +1,31 @@
+info:
+  name: Get Status Export Process
+  type: http
+  seq: 1
+
+http:
+  method: GET
+  url: "{{url}}/api/neofeeder/v2/export/pmb"
+  headers:
+    - name: Authorization
+      value: "{{accessToken}}"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Get Status Export Process
+    request:
+      url: "{{url}}/api/pmb/export"
+      method: GET
+      headers:
+        - name: Authorization
+          value: "{{accessToken}}"
+    response:
+      body:
+        type: text
+        data: ""

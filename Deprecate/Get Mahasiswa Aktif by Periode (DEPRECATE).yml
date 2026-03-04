@@ -1,0 +1,25 @@
+info:
+  name: Get Mahasiswa Aktif by Periode (DEPRECATE)
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{url}}/api/dashboard/mahasiwa/aktif"
+  headers:
+    - name: Authorization
+      value: "{{accessToken}}"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"idPeriode\": \"20241\"\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

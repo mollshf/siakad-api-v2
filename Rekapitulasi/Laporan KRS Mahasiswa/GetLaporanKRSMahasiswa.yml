@@ -1,0 +1,28 @@
+info:
+  name: GetLaporanKRSMahasiswa
+  type: http
+  seq: 1
+
+http:
+  method: GET
+  url: "{{url}}/api/rekapitulasi/krs/laporan?id_prodi=c8940af7-1a7d-43f5-bc27-81c69b4057c3&angkatan=2023&id_periode"
+  headers:
+    - name: Authorization
+      value: "{{accessToken}}"
+  params:
+    - name: id_prodi
+      value: c8940af7-1a7d-43f5-bc27-81c69b4057c3
+      type: query
+    - name: angkatan
+      value: "2023"
+      type: query
+    - name: id_periode
+      value: ""
+      type: query
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

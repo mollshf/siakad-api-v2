@@ -1,0 +1,28 @@
+info:
+  name: Edit Status Setting by its type of setting
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: "{{url}}/api/setting/:setId"
+  headers:
+    - name: Authorization
+      value: "{{accessToken}}"
+  params:
+    - name: setId
+      value: 66f11a2f6f7f9032681616e8
+      type: path
+  body:
+    type: json
+    data: |-
+      {
+          "status": true
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

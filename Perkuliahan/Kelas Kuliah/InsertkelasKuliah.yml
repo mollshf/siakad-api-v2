@@ -1,0 +1,33 @@
+info:
+  name: InsertkelasKuliah
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: "{{url}}/api/perkuliahan/kelaskuliah"
+  headers:
+    - name: Authorization
+      value: "{{accessToken}}"
+  body:
+    type: json
+    data: |-
+      {
+          "id_prodi": "a3102743-1731-4501-8207-5f443241aa8d",
+          "id_matkul": "2ccae2f3-d88e-4468-8618-e27ebfed19ef",
+          "id_semester": "20251",
+          "nama_kelas_kuliah": "KUO91",
+          "bahasan": "subarashi",
+          "tanggal_mulai_efektif": "19-02-2021",
+          "tanggal_akhir_efektif": "19-02-2031",
+          "kapasitas": "1",
+          "apakah_wajib": "1",
+          "semester": "1"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

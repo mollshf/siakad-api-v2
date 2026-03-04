@@ -1,0 +1,30 @@
+info:
+  name: UpdateMataKuliah
+  type: http
+  seq: 2
+
+http:
+  method: PUT
+  url: "{{url}}/api/neofeeder/v2/perkuliahan/mata-kuliah/:id_matkul"
+  headers:
+    - name: Authorization
+      value: "{{accessToken}}"
+  params:
+    - name: id_matkul
+      value: 732df48f-0184-4ac2-94f6-f57a89302363
+      type: path
+  body:
+    type: json
+    data: |-
+      {
+          "kode_mata_kuliah": "SUBA910",
+          "nama_mata_kuliah": "coba222",
+          "id_prodi": "5b8470f6-8f13-4ed6-ba9b-520ebed40fbf"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

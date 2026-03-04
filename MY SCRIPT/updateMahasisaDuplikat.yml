@@ -1,0 +1,25 @@
+info:
+  name: updateMahasisaDuplikat
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: "{{url}}/api/test/nfmahasiswa"
+  body:
+    type: json
+    data: |-
+      [
+          "24420044",
+          "24420024",
+          "24420002",
+          "24420007",
+          "24420025"
+      ]
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

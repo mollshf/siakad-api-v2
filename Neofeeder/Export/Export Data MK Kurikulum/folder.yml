@@ -1,0 +1,7 @@
+info:
+  name: Export Data MK Kurikulum
+  type: folder
+  seq: 7
+
+request:
+  auth: inherit

@@ -1,0 +1,53 @@
+info:
+  name: Post Dekan and Wadeken
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{url}}/api/admin/election/dekan-wadekan/:id_fakultas"
+  headers:
+    - name: Authorization
+      value: "{{accessToken}}"
+  params:
+    - name: id_fakultas
+      value: 6790e2bc-dab6-4eea-b4b3-b4b2602623ee
+      type: path
+  body:
+    type: json
+    data: "{\r
+
+      \    \"dekan\": {\r
+
+      \        \"nama_dekan\": \"Dr. Ir. CUT RAHMAWATI, M.T., IPM., ASEAN Eng\",\r
+
+      \        \"noid\": \"0123097301\",\r
+
+      \        \"keterangan\": \"NIDN\"\r
+
+      \    },\r
+
+      \    \"wadekan\": {\r
+
+      \        \"nama_wadekan\": \"Lindawati, S.Si, M.Eng\",\r
+
+      \        \"noid\": \"0020038604\",\r
+
+      \        \"keterangan\": \"NIDN\"\r
+
+      \    }\r
+
+      }\r
+
+      \r
+
+      \r
+
+      // 52b1a40d-642b-4b27-af73-5671056446d7 = registered faculty id"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

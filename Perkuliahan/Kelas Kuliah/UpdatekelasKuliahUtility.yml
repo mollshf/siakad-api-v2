@@ -1,0 +1,30 @@
+info:
+  name: UpdatekelasKuliahUtility
+  type: http
+  seq: 5
+
+http:
+  method: PUT
+  url: "{{url}}/api/perkuliahan/kelaskuliah/:_id/utils"
+  headers:
+    - name: Authorization
+      value: "{{accessToken}}"
+  params:
+    - name: _id
+      value: 696e6fd8bf8b3bbeef17f232
+      type: path
+  body:
+    type: json
+    data: |-
+      {
+          "semester": "1",
+          "apakah_wajib": "1",
+          "kapasitas": "100"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

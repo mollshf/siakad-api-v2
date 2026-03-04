@@ -1,0 +1,22 @@
+info:
+  name: GetDetailKurikulum
+  type: http
+  seq: 2
+
+http:
+  method: GET
+  url: "{{url}}/api/perkuliahan/kurikulum/:id"
+  headers:
+    - name: Authorization
+      value: "{{accessToken}}"
+  params:
+    - name: id
+      value: 68b7cf7e2cc235321330bfca
+      type: path
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

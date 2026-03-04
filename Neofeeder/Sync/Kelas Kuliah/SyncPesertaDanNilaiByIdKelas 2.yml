@@ -1,0 +1,24 @@
+info:
+  name: SyncPesertaDanNilaiByIdKelas 2
+  type: http
+  seq: 7
+
+http:
+  method: POST
+  url: "{{url}}/api/neofeeder/v2/sync/peserta-nilai-kelas/id-kelas"
+  headers:
+    - name: Authorization
+      value: "{{accessToken}}"
+  body:
+    type: json
+    data: |-
+      {
+          "id_kelas_kuliah": "4fdfa9ea-541d-41c1-b229-9b39f0ffc3aa"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

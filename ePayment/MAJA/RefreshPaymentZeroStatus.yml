@@ -1,0 +1,18 @@
+info:
+  name: RefreshPaymentZeroStatus
+  type: http
+  seq: 8
+
+http:
+  method: PUT
+  url: "{{url}}/api/maja/refresh"
+  headers:
+    - name: Authorization
+      value: "{{accessToken}}"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

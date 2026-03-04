@@ -1,0 +1,32 @@
+info:
+  name: get buka absen
+  type: http
+  seq: 2
+
+http:
+  method: GET
+  url: "{{url}}/api/absensi/mahasiswa?id=654af8a4cd885d6f89e8d4b0"
+  headers:
+    - name: Authorization
+      value: "{{accessToken}}"
+  params:
+    - name: id
+      value: 654af8a4cd885d6f89e8d4b0
+      type: query
+  auth: inherit
+
+runtime:
+  scripts:
+    - type: after-response
+      code: |-
+        // Parse respons sebagai JSON
+        var responseData = res.getBody();
+
+        // Simpan data respons ke variabel lingkungan
+        bru.setEnvVar("myData", JSON.stringify(responseData));
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

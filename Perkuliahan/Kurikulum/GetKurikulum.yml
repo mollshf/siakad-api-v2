@@ -1,0 +1,34 @@
+info:
+  name: GetKurikulum
+  type: http
+  seq: 1
+
+http:
+  method: GET
+  url: "{{url}}/api/perkuliahan/kurikulum?id_prodi&id_semester=20231&term=&offset=&limit="
+  headers:
+    - name: Authorization
+      value: "{{accessToken}}"
+  params:
+    - name: id_prodi
+      value: ""
+      type: query
+    - name: id_semester
+      value: "20231"
+      type: query
+    - name: term
+      value: ""
+      type: query
+    - name: offset
+      value: ""
+      type: query
+    - name: limit
+      value: ""
+      type: query
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

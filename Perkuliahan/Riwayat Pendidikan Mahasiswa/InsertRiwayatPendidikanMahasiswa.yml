@@ -1,0 +1,36 @@
+info:
+  name: InsertRiwayatPendidikanMahasiswa
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{url}}/api/perkuliahan/riwayat-pendidikan-mahasiswa"
+  body:
+    type: json
+    data: |-
+      {
+          "db_id_mahasiswa": "",
+          "nim": "1232",
+          "id_jenis_daftar": "2",
+          "id_jalur_daftar": "1",
+          "id_periode_masuk": "20202",
+          "tanggal_daftar": "2021/08/20",
+          "id_perguruan_tinggi": "a45f8251-3475-487c-9163-00186a4f1ba3",
+          "id_prodi": "43cd4954-f233-4d7a-ab14-0996eb17b81d",
+          "id_bidang_minat": null,
+          "sks_diakui": "10",
+          "id_perguruan_tinggi_asal": "0d1e63e9-cbfb-4546-a242-875c310083a5",
+          "nama_perguruan_tinggi_asal": "",
+          "id_prodi_asal": "b0777f8f-2ea9-4d9a-8ddd-13b90eaf7476",
+          "nama_prodi_asal": "",
+          "id_pembiayaan": "1",
+          "biaya_masuk": 11
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

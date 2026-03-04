@@ -1,0 +1,24 @@
+info:
+  name: New Request
+  type: http
+  seq: 5
+
+http:
+  method: POST
+  url: "{{url}}/api/setting/siakad/data"
+  headers:
+    - name: Authorization
+      value: "{{accessToken}}"
+  body:
+    type: json
+    data: |-
+      {
+          "keterangan": "TAHUN AJARAN"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

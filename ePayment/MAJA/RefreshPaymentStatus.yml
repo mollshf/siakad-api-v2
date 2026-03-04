@@ -1,0 +1,22 @@
+info:
+  name: RefreshPaymentStatus
+  type: http
+  seq: 7
+
+http:
+  method: PUT
+  url: "{{url}}/api/maja/refresh/:invoice"
+  headers:
+    - name: Authorization
+      value: "{{accessToken}}"
+  params:
+    - name: invoice
+      value: MJA-241300021754544347945
+      type: path
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

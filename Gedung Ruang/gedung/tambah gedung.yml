@@ -1,0 +1,29 @@
+info:
+  name: tambah gedung
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{urlDev}}/api/neofeeder/gedung-ruangan"
+  headers:
+    - name: Authorization
+      value: "{{accessToken}}"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"kodeGedung\": \"TKA88\",\r
+
+      \    \"namaGedung\": \"TEKNIK ATOM QUANTUM\",\r
+
+      \    \"statusGedung\": 1\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

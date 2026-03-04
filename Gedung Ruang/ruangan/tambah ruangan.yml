@@ -1,0 +1,33 @@
+info:
+  name: tambah ruangan
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{urlDev}}/api/neofeeder/gedung-ruangan/ruangan"
+  headers:
+    - name: Authorization
+      value: "{{accessTokenLocal}}"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"kodeRuangan\": \"123\",\r
+
+      \    \"namaRuangan\": \"LAB. BAKU HANTAM\",\r
+
+      \    \"statusRuangan\": 1,\r
+
+      \    \"id_gedung\": \"65489384c028dc100a402ebf\",\r
+
+      \    \"kapasistas\": 600\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

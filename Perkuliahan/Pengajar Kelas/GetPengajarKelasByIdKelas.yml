@@ -1,0 +1,22 @@
+info:
+  name: GetPengajarKelasByIdKelas
+  type: http
+  seq: 2
+
+http:
+  method: GET
+  url: "{{url}}/api/perkuliahan/kelaskuliah/:_id/pengajar"
+  headers:
+    - name: Authorization
+      value: "{{accessToken}}"
+  params:
+    - name: _id
+      value: 68c268138f4a606049f42838
+      type: path
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

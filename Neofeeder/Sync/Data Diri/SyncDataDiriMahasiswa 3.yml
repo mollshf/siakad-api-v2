@@ -1,0 +1,27 @@
+info:
+  name: SyncDataDiriMahasiswa 3
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: "{{url}}/api/neofeeder/v2/sync/data/mahasiswa"
+  headers:
+    - name: Authorization
+      value: "{{accessToken}}"
+  body:
+    type: json
+    data: |-
+      [
+          // 2018,
+          // 2019,
+          // 2020,
+          2021
+      ]
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

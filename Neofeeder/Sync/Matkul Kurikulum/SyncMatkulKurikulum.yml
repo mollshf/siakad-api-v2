@@ -1,0 +1,21 @@
+info:
+  name: SyncMatkulKurikulum
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{url}}/api/neofeeder/v2/sync/matkul-kurikulum"
+  headers:
+    - name: Authorization
+      value: "{{accessToken}}"
+  body:
+    type: json
+    data: ""
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

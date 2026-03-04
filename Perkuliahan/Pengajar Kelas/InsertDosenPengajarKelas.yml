@@ -1,0 +1,37 @@
+info:
+  name: InsertDosenPengajarKelas
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{url}}/api/perkuliahan/kelaskuliah/:db_id_kelas_kuliah/pengajar"
+  headers:
+    - name: Authorization
+      value: "{{accessToken}}"
+  params:
+    - name: db_id_kelas_kuliah
+      value: 68c268138f4a606049f42838
+      type: path
+  body:
+    type: json
+    data: |-
+      {
+          "id_registrasi_dosen": "0c6206af-1b27-41ae-bce6-457a176dae78",
+          "sks_substansi_total": "2",
+          "rencana_minggu_pertemuan": "1",
+          "realisasi_minggu_pertemuan": "2",
+          "id_jenis_evaluasi": "1"
+          // "id_substansi": null,
+          // "sks_tm_subst": 2,
+          // "sks_prak_subst": 3,
+          // "sks_prak_lap_subst": 4,
+          // "sks_sim_subst": 2
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

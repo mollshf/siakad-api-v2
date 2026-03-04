@@ -1,0 +1,22 @@
+info:
+  name: getPembiayaan
+  type: http
+  seq: 7
+
+http:
+  method: GET
+  url: "{{url}}/api/perkuliahan/referensi?type=pembiayaan"
+  headers:
+    - name: Authorization
+      value: "{{accessToken}}"
+  params:
+    - name: type
+      value: pembiayaan
+      type: query
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

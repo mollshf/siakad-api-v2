@@ -1,0 +1,26 @@
+info:
+  name: HandleSingleSubUserDocuments
+  type: http
+  seq: 7
+
+http:
+  method: POST
+  url: "{{url}}/api/test/user/subdoc"
+  body:
+    type: json
+    data: |-
+      {
+          "username": "1319129201",
+          "mode": 0, // {0: unset mode, 1: set mode}
+          "type": 0, // {0: data_dosen, 1: data_mahasiswa}
+          "field": "description",
+          "payload": "ini kita set field baru" // value of field
+
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

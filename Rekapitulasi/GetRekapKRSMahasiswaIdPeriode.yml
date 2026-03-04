@@ -1,0 +1,25 @@
+info:
+  name: GetRekapKRSMahasiswaIdPeriode
+  type: http
+  seq: 7
+
+http:
+  method: GET
+  url: "{{url}}/api/rekapitulasi/krs/mahasiswa/:nim?id_periode=20251"
+  headers:
+    - name: Authorization
+      value: "{{accessToken}}"
+  params:
+    - name: id_periode
+      value: "20251"
+      type: query
+    - name: nim
+      value: "23120225"
+      type: path
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

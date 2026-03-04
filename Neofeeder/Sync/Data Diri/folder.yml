@@ -1,0 +1,7 @@
+info:
+  name: Data Diri
+  type: folder
+  seq: 1
+
+request:
+  auth: inherit

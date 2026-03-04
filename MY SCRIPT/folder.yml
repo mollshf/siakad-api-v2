@@ -1,0 +1,7 @@
+info:
+  name: MY SCRIPT
+  type: folder
+  seq: 17
+
+request:
+  auth: inherit

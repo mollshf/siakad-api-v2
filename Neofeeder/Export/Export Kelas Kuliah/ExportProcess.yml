@@ -1,0 +1,24 @@
+info:
+  name: ExportProcess
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: "{{url}}/api/neofeeder/v2/export/kelas"
+  headers:
+    - name: Authorization
+      value: "{{accessToken}}"
+  body:
+    type: json
+    data: |-
+      {
+          "id_semester": "20251"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

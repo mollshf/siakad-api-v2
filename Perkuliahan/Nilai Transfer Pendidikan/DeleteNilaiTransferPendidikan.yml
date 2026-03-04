@@ -1,0 +1,22 @@
+info:
+  name: DeleteNilaiTransferPendidikan
+  type: http
+  seq: 5
+
+http:
+  method: DELETE
+  url: "{{url}}/api/perkuliahan/nilai-transfer/:_id"
+  headers:
+    - name: Authorization
+      value: "{{accessToken}}"
+  params:
+    - name: _id
+      value: 696d03a54117012d5faff7c9
+      type: path
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

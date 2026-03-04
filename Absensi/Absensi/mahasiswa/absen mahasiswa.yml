@@ -1,0 +1,27 @@
+info:
+  name: absen mahasiswa
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{urlDev}}/api/absensi/mahasiswa"
+  headers:
+    - name: Authorization
+      value: "{{accessToken}}"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"id_buka_absen\": \"6566c779e9053116b4571e1a\"\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+docs: '"id_dosen_absen" digunakan untuk menyimpan id'

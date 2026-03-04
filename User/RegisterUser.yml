@@ -1,0 +1,57 @@
+info:
+  name: RegisterUser
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: "{{url}}/api/user"
+  headers:
+    - name: Authorization
+      value: "{{accessToken}}"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"nama\": \"ADMIN\",\r
+
+      \    \"username\": \"BBB\",\r
+
+      \    \"password\": \"password\",\r
+
+      \    \"role\": \"ROLE_ADMIN\"\r
+
+      }\r
+
+      // {\r
+
+      //     \"nama\": \"R FARDILA PUTRI\",\r
+
+      //     \"username\": \"R FARDILA PUTRI\",\r
+
+      //     \"password\": \"12345678\",\r
+
+      //     \"role\": \"ROLE_DOSEN\"\r
+
+      // }\r
+
+      \r
+
+      // {\r
+
+      //     \"nama\": \"ADMIN\",\r
+
+      //     \"username\": \"SUBA\",\r
+
+      //     \"password\": \"5442775676230192\",\r
+
+      //     \"role\": \"ROLE_ADMIN\"\r
+
+      // }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

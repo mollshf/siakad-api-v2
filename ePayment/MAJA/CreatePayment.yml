@@ -1,0 +1,27 @@
+info:
+  name: CreatePayment
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{url}}/api/maja/siakad"
+  headers:
+    - name: Authorization
+      value: "{{accessToken}}"
+  body:
+    type: json
+    data: |-
+      {
+          "price": 400000,
+          "month": 12, // [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12] or Null
+          "year": "2025",
+          "payment_category": "SPP" // category code
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

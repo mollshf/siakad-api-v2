@@ -1,0 +1,22 @@
+info:
+  name: Cancel Payment
+  type: http
+  seq: 9
+
+http:
+  method: DELETE
+  url: "{{url}}/api/maja/siakad/:id"
+  headers:
+    - name: Authorization
+      value: "{{accessToken}}"
+  params:
+    - name: id
+      value: 6894e00a1bf4ef3a343ece62
+      type: path
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

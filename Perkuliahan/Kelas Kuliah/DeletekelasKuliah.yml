@@ -1,0 +1,25 @@
+info:
+  name: DeletekelasKuliah
+  type: http
+  seq: 6
+
+http:
+  method: DELETE
+  url: "{{url}}/api/perkuliahan/kelaskuliah/:_id"
+  headers:
+    - name: Authorization
+      value: "{{accessToken}}"
+  params:
+    - name: _id
+      value: 69711082377b059ee98e42cf
+      type: path
+  body:
+    type: json
+    data: ""
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

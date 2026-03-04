@@ -1,0 +1,18 @@
+info:
+  name: removeIdKelas
+  type: http
+  seq: 12
+
+http:
+  method: GET
+  url: "{{url}}/api/test/kelas/id_kelas"
+  headers:
+    - name: Authorization
+      value: "{{accessToken}}"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

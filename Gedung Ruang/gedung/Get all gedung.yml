@@ -1,0 +1,28 @@
+info:
+  name: Get all gedung
+  type: http
+  seq: 2
+
+http:
+  method: GET
+  url: "{{url}}/api/neofeeder/gedung-ruangan?skip=0&limit=50&term="
+  headers:
+    - name: Authorization
+      value: "{{accessToken}}"
+  params:
+    - name: skip
+      value: "0"
+      type: query
+    - name: limit
+      value: "50"
+      type: query
+    - name: term
+      value: ""
+      type: query
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

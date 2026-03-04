@@ -1,0 +1,27 @@
+info:
+  name: InsertMatkulKurikulum
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{url}}/api/neofeeder/v2/perkuliahan/kurikulum/matkul"
+  headers:
+    - name: Authorization
+      value: "{{accessToken}}"
+  body:
+    type: json
+    data: |-
+      {
+          "id_kurikulum": "c03121db-8f62-4487-81c9-691d6e28824d",
+          "id_matkul": "3011cd95-f1dc-4ac8-a473-7989058eb50a",
+          "semester": "8",
+          "apakah_wajib": "1"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

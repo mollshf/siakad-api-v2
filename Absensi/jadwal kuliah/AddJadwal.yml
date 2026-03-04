@@ -1,0 +1,37 @@
+info:
+  name: AddJadwal
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: "{{urlDev}}/api/neofeeder/jadwal/kelas"
+  headers:
+    - name: Authorization
+      value: "{{accessTokenLocal}}"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"id_kelas_kuliah\": \"aaso2\",\r
+
+      \    \"nidn\": \"swe\",\r
+
+      \    \"jam_mulai\": \"14:00\",\r
+
+      \    \"jam_selesai\": \"23d\",\r
+
+      \    \"hari\": \"asdsd\",\r
+
+      \    \"kode_gedung\":  \"aowk\",\r
+
+      \    \"kode_ruangan\": \"apsl\"\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

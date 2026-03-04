@@ -1,0 +1,23 @@
+info:
+  name: GetSettingByName
+  type: http
+  seq: 2
+
+http:
+  method: GET
+  url: "{{url}}/api/setting"
+  headers:
+    - name: Authorization
+      value: "{{accessToken}}"
+  params:
+    - name: name
+      value: ""
+      type: query
+      disabled: true
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

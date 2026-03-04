@@ -1,0 +1,31 @@
+info:
+  name: RecoveryDataKrsWithLOG
+  type: http
+  seq: 6
+
+http:
+  method: PUT
+  url: "{{url}}/api/perkuliahan/krs/mahasiswa/recovery"
+  headers:
+    - name: Authorization
+      value: "{{accessToken}}"
+  body:
+    type: json
+    data: |-
+      [
+           {
+              "nim": "24151003",
+              "id_kelas": "5aa3c641-a697-4c21-8376-afb238abd34f",
+              "nama_mata_kuliah": "HUKUM KETENAGAKERJAAN*",
+              "description": "ADD",
+              "total": 1,
+              "result": []
+          }
+      ]
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

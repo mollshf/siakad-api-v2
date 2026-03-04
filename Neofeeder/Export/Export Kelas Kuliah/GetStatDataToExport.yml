@@ -1,0 +1,25 @@
+info:
+  name: GetStatDataToExport
+  type: http
+  seq: 1
+
+http:
+  method: GET
+  url: "{{url}}/api/neofeeder/v2/export/kelas?id_semester=20251"
+  headers:
+    - name: Authorization
+      value: "{{accessToken}}"
+  params:
+    - name: id_semester
+      value: "20251"
+      type: query
+  body:
+    type: json
+    data: ""
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

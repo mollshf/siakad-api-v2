@@ -1,0 +1,23 @@
+info:
+  name: GetSettingTranskrip
+  type: http
+  seq: 2
+
+http:
+  method: GET
+  url: "{{url}}/api/perkuliahan/transkrip/:nim"
+  headers:
+    - name: Authorization
+      value: "{{accessToken}}"
+  params:
+    - name: nim
+      value: "21150051"
+      type: path
+      description: 22420002P
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

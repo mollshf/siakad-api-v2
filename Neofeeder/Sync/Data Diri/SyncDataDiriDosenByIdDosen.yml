@@ -1,0 +1,25 @@
+info:
+  name: SyncDataDiriDosenByIdDosen
+  type: http
+  seq: 6
+
+http:
+  method: POST
+  url: "{{url}}/api/neofeeder/v2/sync/data/dosen/:id_dosen"
+  headers:
+    - name: Authorization
+      value: "{{accessToken}}"
+  params:
+    - name: id_dosen
+      value: db66606d-e5b7-45f2-9702-c869dab368e7
+      type: path
+  body:
+    type: text
+    data: ""
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

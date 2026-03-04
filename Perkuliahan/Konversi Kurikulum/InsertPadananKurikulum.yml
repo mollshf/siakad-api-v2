@@ -1,0 +1,25 @@
+info:
+  name: InsertPadananKurikulum
+  type: http
+  seq: 5
+
+http:
+  method: POST
+  url: "{{url}}/api/perkuliahan/konversi/padanan"
+  headers:
+    - name: Authorization
+      value: "{{accessToken}}"
+  body:
+    type: json
+    data: |-
+      {
+          "_id": "68bea9b58f4a606049eaae40",
+          "id_matkul_lama": "c093619d-3e40-4c5e-8801-0cdbd194bba9"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

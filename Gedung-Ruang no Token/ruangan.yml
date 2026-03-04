@@ -1,0 +1,29 @@
+info:
+  name: ruangan
+  type: http
+  seq: 2
+
+http:
+  method: GET
+  url: "{{url}}/api/data/gedung-ruangan/ruangan/:id?skip=0&limit=1"
+  params:
+    - name: skip
+      value: "0"
+      type: query
+    - name: limit
+      value: "1"
+      type: query
+    - name: term
+      value: ""
+      type: query
+      disabled: true
+    - name: id
+      value: 66e460755d30203825c5f3af
+      type: path
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

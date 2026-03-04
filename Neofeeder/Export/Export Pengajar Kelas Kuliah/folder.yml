@@ -1,0 +1,7 @@
+info:
+  name: Export Pengajar Kelas Kuliah
+  type: folder
+  seq: 4
+
+request:
+  auth: inherit

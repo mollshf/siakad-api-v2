@@ -1,0 +1,25 @@
+info:
+  name: GetRiwayatNilaiKonversi
+  type: http
+  seq: 3
+
+http:
+  method: GET
+  url: "{{url}}/api/perkuliahan/konversi/riwayat-nilai/:nim?tahun=2023"
+  headers:
+    - name: Authorization
+      value: "{{accessToken}}"
+  params:
+    - name: tahun
+      value: "2023"
+      type: query
+    - name: nim
+      value: "19160046"
+      type: path
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

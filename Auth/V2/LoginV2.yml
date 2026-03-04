@@ -1,0 +1,77 @@
+info:
+  name: LoginV2
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{url}}/api/auth"
+  body:
+    type: json
+    data: "\r
+
+      // {\r
+
+      //     \"username\": \"BBB\",\r
+
+      //     \"password\": \"SiakadPassword\"\r
+
+      // }\r
+
+      // {\r
+
+      //     \"username\": \"BBB\",\r
+
+      //     \"password\": \"password\"\r
+
+      // }\r
+
+      {\r
+
+      \    \"username\": \"0101057601\",\r
+
+      \    \"password\": \"password\"\r
+
+      }\r
+
+      // {\r
+
+      //     \"username\": \"ZU IRFAN\",\r
+
+      //     \"password\": \"password\"\r
+
+      // }\r
+
+      // kaprodi\r
+
+      // {\r
+
+      //     \"username\": \"1320048901\",\r
+
+      //     \"password\": \"password\"\r
+
+      // }"
+  auth: inherit
+
+runtime:
+  scripts:
+    - type: after-response
+      code: |-
+        // Mengambil nilai token dari respons
+        var responseBody = res.getBody();
+        var token = responseBody.data.token;
+        var tokenOTP = responseBody.data.token_otp;
+        let id = responseBody.data.id;
+
+        // Menyimpan token ke dalam environment variable
+
+        bru.setEnvVar("accessToken", token);
+        bru.setEnvVar("accessTokenOTP", tokenOTP);
+
+        bru.setEnvVar("accestTokenMahasiswa", token);
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

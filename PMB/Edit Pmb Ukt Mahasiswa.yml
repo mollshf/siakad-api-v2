@@ -1,0 +1,27 @@
+info:
+  name: Edit Pmb Ukt Mahasiswa
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{url}}/api/pmb/ukt"
+  headers:
+    - name: Authorization
+      value: "{{accessToken}}"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"nim\": \"22110001\",\r
+
+      \    \"ukt\": false\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

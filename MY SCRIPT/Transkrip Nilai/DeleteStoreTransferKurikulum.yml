@@ -1,0 +1,28 @@
+info:
+  name: DeleteStoreTransferKurikulum
+  type: http
+  seq: 5
+
+http:
+  method: DELETE
+  url: "{{url}}/api/transkrip/transfer/kurikulum/:nim"
+  headers:
+    - name: Authorization
+      value: "{{accessToken}}"
+  params:
+    - name: nim
+      value: "20150008"
+      type: path
+  body:
+    type: json
+    data: |-
+      {
+          "id_matkul": "20b5f4e3-2c03-4b55-99b4-a5b9ed4f3d79"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

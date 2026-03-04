@@ -1,0 +1,69 @@
+info:
+  name: GetAllKaprodi
+  type: http
+  seq: 2
+
+http:
+  method: GET
+  url: "{{url}}/api/setting/kaprodi"
+  headers:
+    - name: Authorization
+      value: "{{accessToken}}"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: GetAllKaprodi
+    request:
+      url: "{{url}}/api/setting/kaprodi"
+      method: GET
+      headers:
+        - name: Authorization
+          value: "{{accessToken}}"
+    response:
+      statusText: "200"
+      headers:
+        - name: X-Powered-By
+          value: Express
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "331"
+        - name: ETag
+          value: W/"14b-gd8H6I1PX9TtlAgKML5zGQKy7l4"
+        - name: Vary
+          value: Accept-Encoding
+        - name: Date
+          value: Wed, 31 Dec 2025 03:48:44 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "code": 200,
+              "status": "Success",
+              "data": [
+                  {
+                      "_id": "69549d1a3984dcfcdbcf8269",
+                      "id_prodi": "a3102743-1731-4501-8207-5f443241aa8d",
+                      "id_user": "64b4d3693794c327097f91b9",
+                      "nama_kaprodi": "USMAN",
+                      "default_role": "ROLE_DOSEN",
+                      "createdAt": "1767152855279",
+                      "updatedAt": null,
+                      "__v": 0,
+                      "nama_program_studi": "Agribisnis",
+                      "nama_jenjang_pendidikan": "S1"
+                  }
+              ]
+          }

@@ -1,0 +1,18 @@
+info:
+  name: SyncDataDiriDosen
+  type: http
+  seq: 5
+
+http:
+  method: POST
+  url: "{{url}}/api/neofeeder/v2/sync/data/dosen"
+  headers:
+    - name: Authorization
+      value: "{{accessToken}}"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

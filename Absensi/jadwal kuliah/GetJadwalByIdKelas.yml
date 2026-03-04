@@ -1,0 +1,22 @@
+info:
+  name: GetJadwalByIdKelas
+  type: http
+  seq: 1
+
+http:
+  method: GET
+  url: "{{url}}/api/neofeeder/jadwal/kelas/:id_kelas"
+  headers:
+    - name: Authorization
+      value: "{{accessToken}}"
+  params:
+    - name: id_kelas
+      value: 4141480d-6491-4e8c-94c1-85a3f709e98d
+      type: path
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,28 @@
+info:
+  name: GetSettingTranskripByID
+  type: http
+  seq: 2
+
+http:
+  method: PUT
+  url: "{{url}}/api/setting/transkrip/:id_prodi"
+  headers:
+    - name: Authorization
+      value: "{{accessToken}}"
+  params:
+    - name: id_prodi
+      value: a3102743-1731-4501-8207-5f443241aa8d
+      type: path
+  body:
+    type: json
+    data: |-
+      {
+          "code": "B"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

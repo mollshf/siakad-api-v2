@@ -1,0 +1,33 @@
+info:
+  name: InsertNilaiTransferPendidikan
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: "{{url}}/api/perkuliahan/nilai-transfer"
+  headers:
+    - name: Authorization
+      value: "{{accessToken}}"
+  body:
+    type: json
+    data: |-
+      {
+          "nim": "25183033P",
+          "kode_mata_kuliah_asal": "MK101",
+          "nama_mata_kuliah_asal": "Machine Harus Learning",
+          "sks_mata_kuliah_asal": "12",
+          "nilai_huruf_asal": "A",
+          "id_matkul": "19e290f7-88c7-43a7-848d-c6a393c35010",
+          "nilai_huruf_diakui": "A",
+          "nilai_angka_diakui": "4",
+          "id_perguruan_tinggi": "",
+          "id_semester": "20231"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

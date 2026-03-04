@@ -1,0 +1,42 @@
+info:
+  name: GetAktivitasMahasiswa
+  type: http
+  seq: 3
+
+http:
+  method: GET
+  url: "{{url}}/api/perkuliahan/aktivitas-mahasiswa?id_prodi&offset=0&limit=10&exportTag=0&term"
+  headers:
+    - name: Authorization
+      value: "{{accessToken}}"
+  params:
+    - name: id_semester
+      value: "20251"
+      type: query
+      disabled: true
+    - name: id_prodi
+      value: ""
+      type: query
+    - name: offset
+      value: "0"
+      type: query
+    - name: limit
+      value: "10"
+      type: query
+    - name: exportTag
+      value: "0"
+      type: query
+      description: "0: unexported, 1: exported, 2: deleted"
+    - name: term
+      value: ""
+      type: query
+  body:
+    type: json
+    data: ""
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

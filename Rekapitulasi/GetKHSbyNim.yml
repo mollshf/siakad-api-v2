@@ -1,0 +1,22 @@
+info:
+  name: GetKHSbyNim
+  type: http
+  seq: 3
+
+http:
+  method: GET
+  url: "{{url}}/api/rekapitulasi/khs/:nim"
+  headers:
+    - name: Authorization
+      value: "{{accessToken}}"
+  params:
+    - name: nim
+      value: "23142053"
+      type: path
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

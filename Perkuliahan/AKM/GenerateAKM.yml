@@ -1,0 +1,26 @@
+info:
+  name: GenerateAKM
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{url}}/api/perkuliahan/akm"
+  headers:
+    - name: Authorization
+      value: "{{accessToken}}"
+  body:
+    type: json
+    data: |-
+      {
+          "id_prodi": "f5f3efbe-0a6e-46aa-83c1-e80e40583caa",
+          "angkatan": "2023",
+          "id_semester": ""
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

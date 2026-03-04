@@ -1,0 +1,27 @@
+info:
+  name: tutup absen
+  type: http
+  seq: 6
+
+http:
+  method: POST
+  url: "{{urlDev}}/api/absensi/dosen/tutup-absen"
+  headers:
+    - name: Authorization
+      value: "{{accessToken}}"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"id_buka_absen\": \"656575781d529c2cb555373b\",\r
+
+      \    \"pertemuan\": \"2\"\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

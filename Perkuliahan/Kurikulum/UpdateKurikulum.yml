@@ -1,0 +1,33 @@
+info:
+  name: UpdateKurikulum
+  type: http
+  seq: 6
+
+http:
+  method: PUT
+  url: "{{url}}/api/neofeeder/v2/perkuliahan/kurikulum/:id_kurikulum"
+  headers:
+    - name: Authorization
+      value: "{{accessToken}}"
+  params:
+    - name: id_kurikulum
+      value: 496059d9-8faf-4011-aab9-5cc20e2ce9a0
+      type: path
+  body:
+    type: json
+    data: |-
+      {
+          "nama_kurikulum": "SUBA KURIKULUM 20262",
+          "id_prodi": "a3102743-1731-4501-8207-5f443241aa8d",
+          "id_semester": "20242",
+          "jumlah_sks_lulus": "0",
+          "jumlah_sks_wajib": "0",
+          "jumlah_sks_pilihan": "0"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

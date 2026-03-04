@@ -1,0 +1,131 @@
+info:
+  name: GetMahasiswaBiodataById
+  type: http
+  seq: 3
+
+http:
+  method: GET
+  url: "{{url}}/api/perkuliahan/mahasiswa/biodata/:db_id_mhs"
+  headers:
+    - name: Authorization
+      value: "{{accessToken}}"
+  params:
+    - name: db_id_mhs
+      value: f751e978-c4b4-4235-88bd-4def89f26406
+      type: path
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: GetMahasiswaBiodataById
+    request:
+      url: "{{url}}/api/perkuliahan/mahasiswa/biodata/:db_id_mhs"
+      method: GET
+      headers:
+        - name: Authorization
+          value: "{{accessToken}}"
+      params:
+        - name: db_id_mhs
+          value: 64db0694b05d18b0ef78569f
+          type: path
+    response:
+      statusText: "200"
+      headers:
+        - name: X-Powered-By
+          value: Express
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: ETag
+          value: W/"6ec-XoJ+ntB51XnXKARYXq5N1muiXj8"
+        - name: Vary
+          value: Accept-Encoding
+        - name: Content-Encoding
+          value: br
+        - name: Date
+          value: Fri, 02 Jan 2026 15:47:15 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+        - name: Transfer-Encoding
+          value: chunked
+      body:
+        type: json
+        data: |-
+          {
+              "code": 200,
+              "status": "Success",
+              "data": {
+                  "_id": "64db0694b05d18b0ef78569f",
+                  "id_mahasiswa": "f751e978-c4b4-4235-88bd-4def89f26406",
+                  "__v": 0,
+                  "dusun": "Lampoh Keude",
+                  "email": "22130049@abulyatama.ac.id",
+                  "handphone": null,
+                  "id_agama": "2",
+                  "id_alat_transportasi": "99",
+                  "id_jenis_tinggal": "1",
+                  "id_kebutuhan_khusus_ayah": "0",
+                  "id_kebutuhan_khusus_ibu": "0",
+                  "id_kebutuhan_khusus_mahasiswa": "0",
+                  "id_negara": "ID",
+                  "id_pekerjaan_ayah": null,
+                  "id_pekerjaan_ibu": null,
+                  "id_pekerjaan_wali": null,
+                  "id_pendidikan_ayah": null,
+                  "id_pendidikan_ibu": "0",
+                  "id_pendidikan_wali": "0",
+                  "id_penghasilan_ayah": "11",
+                  "id_penghasilan_ibu": "11",
+                  "id_penghasilan_wali": "11",
+                  "id_wilayah": "060107",
+                  "jalan": null,
+                  "jenis_kelamin": "L",
+                  "kelurahan": "Lampoh Keude",
+                  "kewarganegaraan": "Indonesia",
+                  "kode_pos": "23372",
+                  "nama_agama": "Kristen",
+                  "nama_alat_transportasi": "Lainnya",
+                  "nama_ayah": "AFIFUDDIN",
+                  "nama_jenis_tinggal": "Bersama orang tua",
+                  "nama_kebutuhan_khusus_ayah": "Tidak ada",
+                  "nama_kebutuhan_khusus_ibu": "Tidak ada",
+                  "nama_kebutuhan_khusus_mahasiswa": "Tidak ada",
+                  "nama_mahasiswa": "ARI KURNIAWAN",
+                  "nama_pekerjaan_ayah": null,
+                  "nama_pekerjaan_ibu": null,
+                  "nama_pekerjaan_wali": null,
+                  "nama_pendidikan_ayah": null,
+                  "nama_pendidikan_ibu": "Tidak sekolah",
+                  "nama_pendidikan_wali": "Tidak sekolah",
+                  "nama_penghasilan_ayah": "Kurang dari Rp. 500,000",
+                  "nama_penghasilan_ibu": "Kurang dari Rp. 500,000",
+                  "nama_wali": null,
+                  "nama_wilayah": "Kec. Kuta Baro",
+                  "nik": "1106211511010001",
+                  "nik_ayah": "1106210204560001",
+                  "nik_ibu": "1106214107570016",
+                  "nisn": "0019210539",
+                  "nomor_kps": null,
+                  "npwp": null,
+                  "penerima_kps": "0",
+                  "rt": "0",
+                  "rw": "0",
+                  "status_sync": "sudah sync",
+                  "tanggal_lahir": "15-01-2001",
+                  "tanggal_lahir_ayah": "31-03-1956",
+                  "tanggal_lahir_ibu": "29-06-1957",
+                  "tanggal_lahir_wali": null,
+                  "telepon": null,
+                  "tempat_lahir": "Aceh Besar",
+                  "angkatan": 2022,
+                  "nama_ibu_kandung": "zahri"
+              }
+          }

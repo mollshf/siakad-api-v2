@@ -1,0 +1,18 @@
+info:
+  name: checkExistiKelas
+  type: http
+  seq: 11
+
+http:
+  method: GET
+  url: "{{url}}/api/test/kelas"
+  headers:
+    - name: Authorization
+      value: "{{accessToken}}"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,218 @@
+info:
+  name: Post Export PMB
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{url}}/api/neofeeder/v2/export/pmb"
+  headers:
+    - name: Authorization
+      value: "{{accessToken}}"
+  body:
+    type: json
+    data: |-
+      [
+          {
+              "nama_mahasiswa": "DRAZ VA TRI TESTO",
+              "jenis_kelamin": "L",
+              "kelurahan": "Lampoeh Keude",
+              "nik": "8874565540654371",
+              "nisn": "0061503506",
+              "tempat_lahir": "BANDA ACEH",
+              "tanggal_lahir": "20060329",
+              "id_kebutuhan_khusus_ayah": "0",
+              "handphone": "0",
+              "nama_ibu_kandung": "alamak testo",
+              "id_kebutuhan_khusus_ibu": "0",
+              "id_kebutuhan_khusus_mahasiswa": "0",
+              "email": "alamaktesto@gmail.com",
+              "penerima_kps": "0",
+              "id_wilayah": "060107",
+              "id_agama": "1",
+              "kewarganegaraan": "ID",
+              // new field
+              "kode_program_studi": "85201",
+              "nim": "2515003",
+              "id_periode_masuk": "20251",
+              "tanggal_daftar": "20250501",
+              "id_pembiayaan": "3",
+              "id_jenis_daftar": "1",
+              "id_jalur_daftar": "12",
+              "biaya_masuk": "100000"
+          },
+          {
+              "nama_mahasiswa": "NABILLA",
+              "jenis_kelamin": "P",
+              "kelurahan": "Lampoeh Keude",
+              "nik": "1171096903060001",
+              "nisn": "0061503506",
+              "tempat_lahir": "BANDA ACEH",
+              "tanggal_lahir": "20060329",
+              "id_kebutuhan_khusus_ayah": "0",
+              "nama_ibu_kandung": "Nini Yesita",
+              "handphone": "0",
+              "id_kebutuhan_khusus_ibu": "0",
+              "id_kebutuhan_khusus_mahasiswa": "0",
+              "email": "nabilaputrip438gmail.com",
+              "penerima_kps": "0",
+              "id_wilayah": "060107",
+              "id_agama": "1",
+              "kewarganegaraan": "ID"
+          },
+          {
+              "nama_mahasiswa": "NABILLA",
+              "jenis_kelamin": "P",
+              "kelurahan": "Lampoeh Keude",
+              "nik": "1171096903060001",
+              "nisn": "0061503506",
+              "tempat_lahir": "BANDA ACEH",
+              "tanggal_lahir": "20060329",
+              "id_kebutuhan_khusus_ayah": "0",
+              "nama_ibu_kandung": "Nini Yesita",
+              "handphone": "0",
+              "id_kebutuhan_khusus_ibu": "0",
+              "id_kebutuhan_khusus_mahasiswa": "0",
+              "email": "nabilaputrip438@gmail.com",
+              "penerima_kps": "0",
+              "id_wilayah": "060107",
+              "id_agama": "1",
+              "kewarganegaraan": "ID"
+          },
+          {
+              "nama_mahasiswa": "NABILLA",
+              "jenis_kelamin": "P",
+              "kelurahan": "Lampoeh Keude",
+              "nik": "1171096903060001",
+              "nisn": "0061503506",
+              "tempat_lahir": "BANDA ACEH",
+              "tanggal_lahir": "20060329",
+              "id_kebutuhan_khusus_ayah": "0",
+              "nama_ibu_kandung": "Nini Yesita",
+              "handphone": "0",
+              "id_kebutuhan_khusus_ibu": "0",
+              "id_kebutuhan_khusus_mahasiswa": "0",
+              "email": "nabilaputrip438@gmail.com",
+              "penerima_kps": "0",
+              "id_wilayah": "060107",
+              "id_agama": "1",
+              "kewarganegaraan": "ID"
+          },
+          {
+              "nama_mahasiswa": "NABILLA",
+              "jenis_kelamin": "P",
+              "kelurahan": "Lampoeh Keude",
+              "nik": "1171096903060001",
+              "nisn": "0061503506",
+              "tempat_lahir": "BANDA ACEH",
+              "tanggal_lahir": "20060329",
+              "id_kebutuhan_khusus_ayah": "0",
+              "nama_ibu_kandung": "Nini Yesita",
+              "id_kebutuhan_khusus_ibu": "0",
+              "id_kebutuhan_khusus_mahasiswa": "0",
+              "email": "nabilaputrip438@gmail.com",
+              "handphone": "0",
+              "penerima_kps": "0",
+              "id_wilayah": "060107",
+              "id_agama": "1",
+              "kewarganegaraan": "ID"
+          }
+      ]
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+docs: |-
+  ### POST /api/pmb/export
+
+  This endpoint is used to export collections.
+
+  #### Request Body
+
+  - collections (array of objects): Specify the collections to be exported.
+      
+
+  #### **Schema data in** `'`collections`'` field
+
+  The schema data
+
+  Required data:
+
+  ``` json
+  {
+      "nama_mahasiswa": "string, required",
+      "jenis_kelamin": "string, required",
+      "kelurahan": "string, required",
+      "nik": "string, required",
+      "tempat_lahir": "string, required",
+      "tanggal_lahir": "string, required",
+      "id_kebutuhan_khusus_ayah": "string, required",
+      "nama_ibu_kandung": "string, required",
+      "id_kebutuhan_khusus_ibu": "string, required",
+      "id_kebutuhan_khusus_mahasiswa": "string, required",
+      "email": "string, required",
+      "penerima_kps": "string, required",
+      "id_wilayah": "string, required",
+      "id_agama": "string, required",
+      "kewarganegaraan": "string, required"
+    }
+
+   ```
+
+  Optional Data:
+
+  ``` json
+  {
+    "jalan": "string, optional",
+    "rt": "string, optional",
+    "rw": "string, optional",
+    "dusun": "string, optional",
+    "kode_pos": "string, optional",
+    "nisn": "string, optional",
+    "nama_ayah": "string, optional",
+    "tanggal_lahir_ayah": "string, optional",
+    "nik_ayah": "string, optional",
+    "jenjang_pendidikan_ayah": "string, optional",
+    "id_pekerjaan_ayah": "string, optional",
+    "id_penghasilan_ayah": "string, optional",
+    "tanggal_lahir_ibu": "string, optional",
+    "nik_ibu": "string, optional",
+    "id_jenjang_pendidikan_ibu": "string, optional",
+    "id_pekerjaan_ibu": "string, optional",
+    "id_penghasilan_ibu": "string, optional",
+    "nama_wali": "string, optional",
+    "telephone": "string, optional",
+    "handphone": "string, optional",
+    "no_kps": "string, optional",
+    "npwp": "string, optional",
+    "id_jenis_tinggal": "string, optional",
+    "id_alat_transportasi": "string, optional"
+  }
+
+   ```
+
+  #### Response
+
+  The response for this request can be represented as a JSON schema:
+
+  ``` json
+  {
+      "type": "object",
+      "properties": {
+          "code": {
+              "type": "number"
+          },
+          "message": {
+              "type": "string"
+          },
+          "data": {
+              "type": ["object", "null"]
+          }
+      }
+  }
+
+   ```

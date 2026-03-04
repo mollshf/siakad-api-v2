@@ -1,0 +1,74 @@
+info:
+  name: PostKaprodi
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{url}}/api/setting/kaprodi/0383189e-75bf-4a7d-bcdf-94b068664cb5"
+  headers:
+    - name: Authorization
+      value: "{{accessToken}}"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"id_user\": \"67c678e8061b3e3b8ed822fc\"\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: PostKaprodi
+    request:
+      url: "{{url}}/api/setting/kaprodi/:id_prodi"
+      method: POST
+      headers:
+        - name: Authorization
+          value: "{{accessToken}}"
+      params:
+        - name: id_prodi
+          value: a3102743-1731-4501-8207-5f443241aa8d
+          type: path
+      body:
+        type: json
+        data: "{\r
+
+          \    \"id_user\": \"64b4d3693794c327097f91b9\"\r
+
+          }"
+    response:
+      statusText: "201"
+      headers:
+        - name: X-Powered-By
+          value: Express
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "73"
+        - name: ETag
+          value: W/"49-/3NpQhco4pouCe7kiMoNbgtBidc"
+        - name: Vary
+          value: Accept-Encoding
+        - name: Date
+          value: Wed, 31 Dec 2025 03:48:42 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "code": 201,
+              "status": "Success",
+              "message": "Kaprodi berhasil ditambahkan!"
+          }

@@ -1,0 +1,39 @@
+info:
+  name: Login
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{url}}/api/auth/login"
+  body:
+    type: json
+    data: |-
+      {
+          "username": "BBB",
+          "password": "password"
+      }
+  auth: inherit
+
+runtime:
+  scripts:
+    - type: after-response
+      code: |-
+        // Mengambil nilai token dari respons
+        var responseBody = res.getBody();
+        var token = responseBody.data.token;
+        var tokenOTP = responseBody.data.token_otp;
+        let id = responseBody.data.id;
+
+        // Menyimpan token ke dalam environment variable
+
+        bru.setEnvVar("accessToken", token);
+        bru.setEnvVar("accessTokenOTP", tokenOTP);
+
+        bru.setEnvVar("accestTokenMahasiswa", token);
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

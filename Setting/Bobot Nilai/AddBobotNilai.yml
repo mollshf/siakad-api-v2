@@ -1,0 +1,28 @@
+info:
+  name: AddBobotNilai
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{url}}/api/setting/bobot"
+  headers:
+    - name: Authorization
+      value: "{{accessToken}}"
+  body:
+    type: json
+    data: |-
+      {
+          "db_id_kelas_kuliah": "69762e49cd68a3f099fc027f",
+          "tugas": 0,
+          "quiz": 0,
+          "uts": 100,
+          "uas": 100
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

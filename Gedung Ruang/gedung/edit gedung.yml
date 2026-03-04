@@ -1,0 +1,31 @@
+info:
+  name: edit gedung
+  type: http
+  seq: 3
+
+http:
+  method: PUT
+  url: "{{urlDev}}/api/neofeeder/gedung-ruangan"
+  headers:
+    - name: Authorization
+      value: "{{accessTokenLocal}}"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"id\": \"65489384c028dc100a402ebf\",\r
+
+      \    \"kodeGedung\": \"TKL77\",\r
+
+      \    \"namaGedung\": \"TEKNIK LISTRIK\",\r
+
+      \    \"status\": 1\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

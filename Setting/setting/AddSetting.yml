@@ -1,0 +1,94 @@
+info:
+  name: AddSetting
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{url}}/api/setting"
+  headers:
+    - name: Authorization
+      value: "{{accessToken}}"
+  body:
+    type: json
+    data: |-
+      {
+          "name": "nilai-kategori",
+          "setting": {
+              "nilai_huruf": [
+                  {
+                      "huruf": "A",
+                      "angka": 76
+                  },
+                  {
+                      "huruf": "B",
+                      "angka": 66
+                  },
+                  {
+                      "huruf": "C",
+                      "angka": 56
+                  },
+                  {
+                      "huruf": "D",
+                      "angka": 46
+                  }
+              ],
+              "nilai_indeks": [
+                  {
+                      "huruf": "A",
+                      "angka": "4.00"
+                  },
+                  {
+                      "huruf": "B",
+                      "angka": "3.00"
+                  },
+                  {
+                      "huruf": "C",
+                      "angka": "2.00"
+                  },
+                  {
+                      "huruf": "D",
+                      "angka": "1.00"
+                  },
+                  {
+                      "huruf": "E",
+                      "angka": "0.00"
+                  }
+              ],
+              "option_nilai": [
+                          {
+                              "value": "A",
+                              "label": "A (4,00)",
+                              "indeks": "4.00"
+                          },
+                          {
+                              "value": "B",
+                              "label": "B (3,00)",
+                              "indeks": "3.00"
+                          },
+                      
+                          {
+                              "value": "C",
+                              "label": "C (2,00)",
+                              "indeks": "2.00"
+                          },
+                          {
+                              "value": "D",
+                              "label": "D (1,00)",
+                              "indeks": "1.00"
+                          },
+                          {
+                              "value": "E",
+                              "label": "E (0,00)",
+                              "indeks": "0.00"
+                          }
+                      ]
+          }
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

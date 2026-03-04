@@ -1,0 +1,22 @@
+info:
+  name: GetPesertaKelasKuliahById
+  type: http
+  seq: 2
+
+http:
+  method: GET
+  url: "{{url}}/api/perkuliahan/kelaskuliah/:db_id_kelas_kuliah/peserta"
+  headers:
+    - name: Authorization
+      value: "{{accessToken}}"
+  params:
+    - name: db_id_kelas_kuliah
+      value: 69660b24c2bdb3c1b162807f
+      type: path
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

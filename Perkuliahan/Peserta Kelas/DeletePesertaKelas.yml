@@ -1,0 +1,28 @@
+info:
+  name: DeletePesertaKelas
+  type: http
+  seq: 4
+
+http:
+  method: DELETE
+  url: "{{url}}/api/perkuliahan/kelaskuliah/:db_id_kelas_kuliah/peserta/:_id"
+  headers:
+    - name: Authorization
+      value: "{{accessToken}}"
+  params:
+    - name: db_id_kelas_kuliah
+      value: 69660b24c2bdb3c1b162807f
+      type: path
+    - name: _id
+      value: 696998f58427fc4b120e3801
+      type: path
+  body:
+    type: json
+    data: ""
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

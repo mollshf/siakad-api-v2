@@ -1,0 +1,97 @@
+info:
+  name: UpdateBiodataMahasiswa
+  type: http
+  seq: 4
+
+http:
+  method: PUT
+  url: "{{url}}/api/perkuliahan/mahasiswa/biodata/:db_id_mhs"
+  headers:
+    - name: Authorization
+      value: "{{accessToken}}"
+  params:
+    - name: db_id_mhs
+      value: f751e978-c4b4-4235-88bd-4def89f26406
+      type: path
+  body:
+    type: json
+    data: |-
+      {
+          "nik": "1106211511010001",
+          "nama_mahasiswa": "ARI KURNIAWAN",
+          "email": "22130049@abulyatama.ac.id",
+          "tanggal_lahir": "15-01-2001", // dd-mm-yyyy
+          "tempat_lahir": "Aceh Besar",
+          "nama_ibu_kandung": "zahri",
+          "handphone": null,
+          "id_agama": "2"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: UpdateMahasiswa
+    request:
+      url: "{{url}}/api/perkuliahan/mahasiswa/biodata/:db_id_mhs"
+      method: PUT
+      headers:
+        - name: Authorization
+          value: "{{accessToken}}"
+      params:
+        - name: db_id_mhs
+          value: 64db0694b05d18b0ef78569f
+          type: path
+      body:
+        type: json
+        data: |-
+          {
+              "nik": "1106211511010001",
+              "nama_mahasiswa": "ARI KURNIAWAN",
+              "email": "22130049@abulyatama.ac.id",
+              "tanggal_lahir": "15-01-2001", // dd-mm-yyyy
+              "tempat_lahir": "Aceh Besar",
+              "nama_ibu_kandung": "zahri",
+              "handphone": null,
+              "id_agama": "2"
+          }
+    response:
+      statusText: "201"
+      headers:
+        - name: X-Powered-By
+          value: Express
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "171"
+        - name: ETag
+          value: W/"ab-wnLxZ4wiglsrsZUvrXn/Gri2Dzk"
+        - name: Vary
+          value: Accept-Encoding
+        - name: Date
+          value: Fri, 02 Jan 2026 15:47:06 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "code": 201,
+              "status": "Success",
+              "message": "Biodata berhasil diperbarui",
+              "data": {
+                  "acknowledged": true,
+                  "modifiedCount": 0,
+                  "upsertedId": null,
+                  "upsertedCount": 0,
+                  "matchedCount": 1
+              }
+          }

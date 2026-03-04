@@ -1,0 +1,27 @@
+info:
+  name: GetFilteredTranskrip
+  type: http
+  seq: 2
+
+http:
+  method: GET
+  url: "{{url}}/api/perkuliahan/konversi/kurikulum/transkrip/:nim/filtered?tahun=2023"
+  headers:
+    - name: Authorization
+      value: "{{accessToken}}"
+  params:
+    - name: tahun
+      value: "2023"
+      type: query
+    - name: nim
+      value: 21120110P
+      type: path
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+docs: API ini akan menampilkan data transkrip yang sudah difilter dengan unlist transkrip

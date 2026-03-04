@@ -1,0 +1,99 @@
+info:
+  name: Post Export Lulus
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{url}}/api/import/mahasiswald"
+  headers:
+    - name: Authorization
+      value: "{{accessToken}}"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"collections\": [\r
+
+      \        {\r
+
+      \            \"nim\": \"19114008\",\r
+
+      \            \"nama_mahasiswa\": \"MELI SUSANTI\",\r
+
+      \            \"id_jenis_keluar\": 1,\r
+
+      \            \"id_periode_keluar\": 20231,\r
+
+      \            \"tanggal_keluar\": \"2024-02-17\",\r
+
+      \            \"nomor_sk_yudisium\": \"040 Tahun 2024\",\r
+
+      \            \"tanggal_sk_yudisium\": \"2024-02-22\",\r
+
+      \            \"ipk\": \"3.34\",\r
+
+      \            \"nomor_ijazah\": \"842022024000017\",\r
+
+      \            \"kode_prodi\": 84202,\r
+
+      \            \"nama_prodi\": \"Pendidikan Matematika\",\r
+
+      \            \"keterangan\": \"\",\r
+
+      \            \"jalur_skripsi\": null,\r
+
+      \            \"judul_skripsi\": null,\r
+
+      \            \"bulan_awal_bimbingan\": null,\r
+
+      \            \"bulan_akhir_bimbingan\": null\r
+
+      \        },\r
+
+      \        {\r
+
+      \            \"nim\": \"19114008\",\r
+
+      \            \"nama_mahasiswa\": \"MELI SUSANTI\",\r
+
+      \            \"id_jenis_keluar\": 1,\r
+
+      \            \"id_periode_keluar\": 20231,\r
+
+      \            \"tanggal_keluar\": \"2024-02-17\",\r
+
+      \            \"nomor_sk_yudisium\": \"040 Tahun 2024\",\r
+
+      \            \"tanggal_sk_yudisium\": \"2024-02-22\",\r
+
+      \            \"ipk\": \"3.34\",\r
+
+      \            \"nomor_ijazah\": \"842022024000017\",\r
+
+      \            \"kode_prodi\": 84202,\r
+
+      \            \"nama_prodi\": \"Pendidikan Matematika\",\r
+
+      \            \"keterangan\": \"\",\r
+
+      \            \"jalur_skripsi\": null,\r
+
+      \            \"judul_skripsi\": null,\r
+
+      \            \"bulan_awal_bimbingan\": null,\r
+
+      \            \"bulan_akhir_bimbingan\": null\r
+
+      \        }\r
+
+      \    ]\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

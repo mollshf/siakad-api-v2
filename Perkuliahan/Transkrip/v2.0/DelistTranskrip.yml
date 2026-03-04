@@ -1,0 +1,39 @@
+info:
+  name: DelistTranskrip
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: "{{url}}/api/perkuliahan/transkrip/:nim"
+  headers:
+    - name: Authorization
+      value: "{{accessToken}}"
+  params:
+    - name: nim
+      value: 23110139P
+      type: path
+  body:
+    type: json
+    data: |-
+      [
+          {
+              "id_kelas": "fae1cc37-66a3-48b9-a403-8c7d42a48fc7",
+              "id_transfer": null,
+              "id_konversi_aktivitas": null,
+              "smt_diambil": "110"
+          },
+          {
+              "id_kelas": null,
+              "id_transfer": "78404a03-7401-4d8d-b1da-b360b9f965bf",
+              "id_konversi_aktivitas": null,
+              "smt_diambil": "5"
+          }
+      ]
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,28 @@
+info:
+  name: StoredTranskrip
+  type: http
+  seq: 9
+
+http:
+  method: POST
+  url: "{{url}}/api/perkuliahan/konversi/kurikulum/transkrip"
+  headers:
+    - name: Authorization
+      value: "{{accessToken}}"
+  body:
+    type: json
+    data: |-
+      {
+          "nim": "21120110P",
+          "id_matkul": "969d2c55-24db-4b9c-96fc-e3caebb4f2b3",
+          "id_kelas": "01268fe0-51ce-4d58-a240-8d7e24668ab4",
+          "id_transfer": null,
+          "semester": "7"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

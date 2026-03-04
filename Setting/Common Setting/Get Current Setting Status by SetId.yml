@@ -1,0 +1,22 @@
+info:
+  name: Get Current Setting Status by SetId
+  type: http
+  seq: 2
+
+http:
+  method: GET
+  url: "{{url}}/api/setting/:setId"
+  headers:
+    - name: Authorization
+      value: "{{accessToken}}"
+  params:
+    - name: setId
+      value: 66f11a2f6f7f9032681616e8
+      type: path
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

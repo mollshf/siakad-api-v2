@@ -1,0 +1,25 @@
+info:
+  name: RegisterMahasiswa
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: "{{url}}/api/user/mahasiswa"
+  headers:
+    - name: Authorization
+      value: "{{accessToken}}"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"nim\": \"25150051P\"\r
+
+      }\r\n"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

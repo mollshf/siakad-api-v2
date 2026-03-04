@@ -1,0 +1,7 @@
+info:
+  name: AKM
+  type: folder
+  seq: 13
+
+request:
+  auth: inherit

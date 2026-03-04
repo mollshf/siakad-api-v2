@@ -1,0 +1,22 @@
+info:
+  name: Get Pmb Ukt Mahasiswa
+  type: http
+  seq: 1
+
+http:
+  method: GET
+  url: "{{url}}/api/pmb/ukt/:nim"
+  headers:
+    - name: Authorization
+      value: "{{accessToken}}"
+  params:
+    - name: nim
+      value: "22"
+      type: path
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

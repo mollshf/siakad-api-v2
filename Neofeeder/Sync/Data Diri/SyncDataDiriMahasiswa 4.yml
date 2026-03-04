@@ -1,0 +1,29 @@
+info:
+  name: SyncDataDiriMahasiswa 4
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: "{{url}}/api/neofeeder/v2/sync/data/mahasiswa"
+  headers:
+    - name: Authorization
+      value: "{{accessToken}}"
+  body:
+    type: json
+    data: |-
+      [
+          // 2022,
+          // 2023,
+          // 2024,
+          // 2021
+          // 2024
+          2025
+      ]
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

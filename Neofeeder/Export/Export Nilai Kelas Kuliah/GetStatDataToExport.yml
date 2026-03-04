@@ -1,0 +1,76 @@
+info:
+  name: GetStatDataToExport
+  type: http
+  seq: 1
+
+http:
+  method: GET
+  url: "{{url}}/api/neofeeder/v2/export/kelas/nilai?id_semester=20251"
+  headers:
+    - name: Authorization
+      value: "{{accessToken}}"
+  params:
+    - name: id_semester
+      value: "20251"
+      type: query
+  body:
+    type: json
+    data: ""
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: GetStatDataToExport
+    request:
+      url: "{{url}}/api/neofeeder/v2/export/kelas/peserta?id_semester=20251"
+      method: GET
+      headers:
+        - name: Authorization
+          value: "{{accessToken}}"
+      params:
+        - name: id_semester
+          value: "20251"
+          type: query
+      body:
+        type: json
+        data: ""
+    response:
+      statusText: "200"
+      headers:
+        - name: X-Powered-By
+          value: Express
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "136"
+        - name: ETag
+          value: W/"88-0OPPMgxvXR2j9/Qp3re5NCcu+Qo"
+        - name: Vary
+          value: Accept-Encoding
+        - name: Date
+          value: Mon, 22 Dec 2025 01:17:26 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "code": 200,
+              "status": "Success",
+              "data": {
+                  "id_semester": "20251",
+                  "dt_type": "nfkelaskuliah",
+                  "total": 32010,
+                  "exported": 213,
+                  "unexported": 31797
+              }
+          }

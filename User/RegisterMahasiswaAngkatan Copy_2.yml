@@ -1,0 +1,21 @@
+info:
+  name: RegisterMahasiswaAngkatan Copy_2
+  type: http
+  seq: 9
+
+http:
+  method: POST
+  url: "{{url}}/api/user/mahasiswa/multiple"
+  headers:
+    - name: Authorization
+      value: "{{accessToken}}"
+  body:
+    type: json
+    data: "{\r\n    \"angkatan\": 2021\r\n}\r\n"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

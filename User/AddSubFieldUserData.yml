@@ -1,0 +1,19 @@
+info:
+  name: AddSubFieldUserData
+  type: http
+  seq: 15
+
+http:
+  method: POST
+  url: "{{url}}/api/user/v2/:nim/student"
+  params:
+    - name: nim
+      value: ""
+      type: path
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

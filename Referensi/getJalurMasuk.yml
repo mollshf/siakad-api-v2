@@ -1,0 +1,22 @@
+info:
+  name: getJalurMasuk
+  type: http
+  seq: 13
+
+http:
+  method: GET
+  url: "{{url}}/api/perkuliahan/referensi?type=jalur-masuk"
+  headers:
+    - name: Authorization
+      value: "{{accessToken}}"
+  params:
+    - name: type
+      value: jalur-masuk
+      type: query
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

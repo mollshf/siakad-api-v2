@@ -1,0 +1,31 @@
+info:
+  name: approve absen mahasiswa
+  type: http
+  seq: 5
+
+http:
+  method: PUT
+  url: "{{url}}/api/absensi/dosen/approve"
+  headers:
+    - name: Authorization
+      value: "{{accessToken}}"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"nim\": \"22130049\",\r
+
+      \    \"id_kelas_kuliah\": \"76d260d4-40c2-4ba1-b413-4359ffa1575e\",\r
+
+      \    \"id_buka_absen\": \"\",\r
+
+      \    \"pertemuan\": \"4\"\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

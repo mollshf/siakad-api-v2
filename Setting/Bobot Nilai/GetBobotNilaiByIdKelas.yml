@@ -1,0 +1,22 @@
+info:
+  name: GetBobotNilaiByIdKelas
+  type: http
+  seq: 2
+
+http:
+  method: GET
+  url: "{{url}}/api/setting/bobot/:db_id_kelas_kuliah"
+  headers:
+    - name: Authorization
+      value: "{{accessToken}}"
+  params:
+    - name: db_id_kelas_kuliah
+      value: 695f593b373c73b8b0f5b658
+      type: path
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

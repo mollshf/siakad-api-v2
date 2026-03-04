@@ -1,0 +1,7 @@
+info:
+  name: Export Nilai Kelas Kuliah
+  type: folder
+  seq: 5
+
+request:
+  auth: inherit
