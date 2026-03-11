@@ -6,6 +6,9 @@ info:
 http:
   method: POST
   url: "{{url}}/api/perkuliahan/attendance/session"
+  headers:
+    - name: Authorization
+      value: "{{accessToken}}"
   body:
     type: json
     data: |-

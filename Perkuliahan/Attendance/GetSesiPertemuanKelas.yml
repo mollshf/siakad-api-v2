@@ -6,6 +6,9 @@ info:
 http:
   method: GET
   url: "{{url}}/api/perkuliahan/attendance/session/?db_id_kelas_kuliah=689878098f4a606049ccfc54"
+  headers:
+    - name: Authorization
+      value: "{{accessToken}}"
   params:
     - name: db_id_kelas_kuliah
       value: 689878098f4a606049ccfc54

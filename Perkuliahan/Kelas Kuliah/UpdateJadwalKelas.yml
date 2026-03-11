@@ -1,7 +1,7 @@
 info:
   name: UpdateJadwalKelas
   type: http
-  seq: 9
+  seq: 7
 
 http:
   method: PUT
@@ -17,9 +17,10 @@ http:
     type: json
     data: |-
       {
-        "hari": null, // 1-7 = senin-minggu
-        "jam_mulai": "hh:mm",
-        "jam_selesai": "hh:mm"
+          "hari": 7, // 1-7 = senin-minggu
+          "jam_mulai": "10:10",
+          "jam_selesai": "11:59",
+          "id_ruangan": "RUANG MOIMOI"
       }
   auth: inherit
 

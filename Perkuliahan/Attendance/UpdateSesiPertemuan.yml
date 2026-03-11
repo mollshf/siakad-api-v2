@@ -6,6 +6,9 @@ info:
 http:
   method: PUT
   url: "{{url}}/api/perkuliahan/attendance/session/:id"
+  headers:
+    - name: Authorization
+      value: "{{accessToken}}"
   params:
     - name: id
       value: ""
