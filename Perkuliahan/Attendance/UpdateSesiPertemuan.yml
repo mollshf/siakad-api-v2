@@ -1,0 +1,31 @@
+info:
+  name: UpdateSesiPertemuan
+  type: http
+  seq: 3
+
+http:
+  method: PUT
+  url: "{{url}}/api/perkuliahan/attendance/session/:id"
+  params:
+    - name: id
+      value: ""
+      type: path
+  body:
+    type: json
+    data: |-
+      {
+          "pertemuan_ke": 2,
+          "bahasan": "teologi",
+          "hari":1,
+          "jam_mulai": "19:59",
+          "jam_selesai": "19:590",
+          "id_ruangan": "",
+          "tanggal": "2"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

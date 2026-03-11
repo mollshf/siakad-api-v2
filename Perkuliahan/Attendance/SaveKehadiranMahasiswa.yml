@@ -1,0 +1,24 @@
+info:
+  name: SaveKehadiranMahasiswa
+  type: http
+  seq: 6
+
+http:
+  method: POST
+  url: "{{url}}/api/perkuliahan/attendance/absen"
+  body:
+    type: json
+    data: |-
+      {
+          "id_pertemuan": "69b06b0338313725e63db1c3",
+          "db_id_krs": "68b0124a8f4a606049d1cfc5",
+          "status": "hadir", // ['hadir', 'izin', 'sakit', 'alpha']
+          "note": "" // keterangan izin, sakit, alpha
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

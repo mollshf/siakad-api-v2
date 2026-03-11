@@ -1,0 +1,28 @@
+info:
+  name: InsertSesiPertemuanKelas
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{url}}/api/perkuliahan/attendance/session"
+  body:
+    type: json
+    data: |-
+      {
+          "db_id_kelas_kuliah": "689878098f4a606049ccfc54",
+          "pertemuan_ke": 4,
+          "bahasan": "teologi",
+          "hari":1,
+          "jam_mulai": "19:59",
+          "jam_selesai": "19:59",
+          "id_ruangan": "",
+          "tanggal": "2" // ISOTIME
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
