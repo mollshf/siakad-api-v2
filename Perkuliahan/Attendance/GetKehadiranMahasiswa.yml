@@ -5,16 +5,13 @@ info:
 
 http:
   method: GET
-  url: "{{url}}/api/perkuliahan/attendance/absen?db_id_kelas_kuliah=689878098f4a606049ccfc54&pertemuan_ke=2"
+  url: "{{url}}/api/perkuliahan/attendance/absen?id_pertemuan=69b06aff38313725e63db1bd"
   headers:
     - name: Authorization
       value: "{{accessToken}}"
   params:
-    - name: db_id_kelas_kuliah
-      value: 689878098f4a606049ccfc54
-      type: query
-    - name: pertemuan_ke
-      value: "2"
+    - name: id_pertemuan
+      value: 69b06aff38313725e63db1bd
       type: query
   auth: inherit
 
@@ -23,3 +20,5 @@ settings:
   timeout: 0
   followRedirects: true
   maxRedirects: 5
+
+docs: ini adalah sugoi
